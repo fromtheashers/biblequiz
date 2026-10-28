@@ -1,0 +1,4 @@
+STATUS: DONE (agent a7abbc5e9138603fd)
+Claims: worker.js (routes, 426/400/403, host variants refused, /qr.svg, /healthz, questions.json 404), game-room.js (hibernation API, restore + disconnect stale, acks/state/notices, save+alarm, 2KB limit, rate limit, 60 player cap), wrangler.jsonc (run_worker_first:true, sqlite migration, no nodejs_compat), package.json (qrcode, wrangler, ws; test script -> node --test test/*.test.js), README, test/worker.test.js 11 tests (restart resume, alarm end, security, secrecy). npm test 60/60. Dry-run 121 KiB.
+Assumptions: test script changed (node --test test/ fails on Node 22); run_worker_first true (all requests count vs 100k/day); env timers override saved config; kicked/replaced closed immediately (4001/4002); worker name biblequiz must match dashboard.
+Open: README host controls follow brief, confirm vs host.js labels.

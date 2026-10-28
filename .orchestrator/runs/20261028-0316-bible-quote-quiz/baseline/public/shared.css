@@ -1,0 +1,115 @@
+/* Bible or Not? - shared base styles and design tokens.
+ * Used by the host screen. The phone page keeps its own copy of the tokens,
+ * so it loads nothing from here.
+ */
+:root {
+  --bg: #0c1022;
+  --card: #1b2250;
+  --card2: #252e68;
+  --line: rgba(255, 255, 255, 0.11);
+  --ink: #f5f6ff;
+  --muted: #a6aedb;
+  --pink: #ff4d9d;
+  --yellow: #ffd23f;
+  --teal: #2ee6c5;
+  --violet: #7b5cff;
+  --red: #ff5c6c;
+  --green: #4be38a;
+
+  /* answer colours: each reaches at least 4.5:1 against white text */
+  --a0: #c8102e; /* ▲ */
+  --a1: #1260be; /* ◆ */
+  --a2: #8a6100; /* ● */
+  --a3: #1d6f0a; /* ■ */
+  --bible: #5b34c4; /* 📖 Bible */
+  --notbible: #0f6b63; /* 💬 Not the Bible */
+  --right: #4be38a;
+  --wrong: #ff5c6c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background:
+    radial-gradient(1100px 650px at 8% -10%, #2d1f6e 0%, transparent 60%),
+    radial-gradient(900px 600px at 112% 8%, #0e4d5c 0%, transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+[hidden] { display: none !important; }
+h1, h2, h3 { margin: 0; line-height: 1.12; }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+/* ---------- buttons ---------- */
+.btn {
+  background: linear-gradient(180deg, var(--pink), #e23585);
+  border: 0;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  padding: 0.85em 1.4em;
+  border-radius: 14px;
+  box-shadow: 0 5px 0 #a21f5d, 0 10px 22px rgba(0, 0, 0, 0.35);
+  transition: transform 0.06s, box-shadow 0.06s, opacity 0.15s;
+  touch-action: manipulation;
+}
+.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 #a21f5d; }
+.btn[disabled] { opacity: 0.45; box-shadow: none; cursor: not-allowed; transform: none; }
+.btn.teal { background: linear-gradient(180deg, var(--teal), #17b99d); color: #04201b; box-shadow: 0 5px 0 #0d7664, 0 10px 22px rgba(0, 0, 0, 0.35); }
+.btn.teal:active { box-shadow: 0 1px 0 #0d7664; }
+.btn.ghost { background: rgba(255, 255, 255, 0.09); border: 1px solid var(--line); box-shadow: none; font-weight: 700; }
+.btn.ghost:active { transform: scale(0.97); }
+.btn.danger { background: rgba(255, 92, 108, 0.16); border: 1px solid rgba(255, 92, 108, 0.5); color: #ffc3ca; box-shadow: none; font-weight: 700; }
+.btn.small { padding: 0.45em 0.8em; font-size: 0.85rem; border-radius: 10px; }
+
+kbd {
+  font: inherit; font-size: 0.8em; font-weight: 800;
+  background: rgba(255, 255, 255, 0.14); border: 1px solid var(--line); border-bottom-width: 3px;
+  border-radius: 6px; padding: 0 0.45em; margin: 0 0.1em;
+}
+
+/* ---------- bits ---------- */
+.chip {
+  display: inline-flex; align-items: center; gap: 0.35em;
+  background: rgba(255, 255, 255, 0.09); border: 1px solid var(--line);
+  padding: 0.3em 0.8em; border-radius: 99px; font-weight: 700; max-width: 100%;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  animation: pop 0.25s ease-out both;
+}
+.chip.off { opacity: 0.5; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+.badge-dbl {
+  display: inline-block; background: var(--yellow); color: #3a2a00; font-weight: 900;
+  padding: 0.2em 0.7em; border-radius: 99px; letter-spacing: 0.04em; animation: pulse 1.4s ease-in-out infinite;
+}
+
+/* ---------- timer ---------- */
+.timer { display: flex; align-items: center; gap: 14px; }
+.timer .t-num { font-weight: 900; font-variant-numeric: tabular-nums; min-width: 2.4em; text-align: right; font-size: 2.6rem; }
+.bar { flex: 1; height: 16px; border-radius: 99px; background: rgba(255, 255, 255, 0.13); overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--teal), var(--yellow)); transition: width 0.25s linear; }
+.timer.urgent .bar > i { background: linear-gradient(90deg, var(--red), var(--pink)); }
+.timer.urgent .t-num { color: var(--red); animation: pulse 0.7s ease-in-out infinite; }
+
+/* ---------- toast ---------- */
+.toast {
+  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+  background: #2a1030; border: 1px solid var(--pink); color: #ffd6e8;
+  padding: 0.7em 1.1em; border-radius: 12px; font-weight: 700; z-index: 50; max-width: 92vw; text-align: center;
+  animation: pop 0.2s ease-out both; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- motion ---------- */
+@keyframes pop { from { transform: scale(0.82); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes rise { from { transform: translateY(26px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

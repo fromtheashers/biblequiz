@@ -330,9 +330,13 @@ describe('Cloudflare Worker + GameRoom Durable Object (wrangler dev)', { timeout
     assert.equal(qa.round.type, 'yesno');
     assert.equal(qa.timerTotal, YESNO_SECONDS * 1000);
 
+    const bobFrom = bob.frames.length;
     const a = await alice.cmd({ type: 'answer', answer: true, qid: qa.question.qid });
     assert.equal(a.ok, true);
     assert.equal(a.answer, true);
+    // Alice's answer changes nothing on Bob's phone, so Bob is not sent a new view.
+    await host.waitState((v) => v.phase === 'question' && v.answers.count === 1);
+    assert.equal(bob.messages.slice(bobFrom).filter((m) => m.type === 'state').length, 0);
     const b = await bob.cmd({ type: 'answer', answer: false, qid: qa.question.qid });
     assert.equal(b.ok, true);
 

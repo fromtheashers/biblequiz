@@ -320,8 +320,18 @@
     $('#me-score').textContent = v.me.score + ' pts';
   }
 
+  // The quote face is not preloaded, so joining stays fast on a slow connection.
+  // Fetch it while players wait, so the first quote never switches fonts mid-read.
+  let quoteFontWarmed = false;
+  function warmQuoteFont() {
+    if (quoteFontWarmed) return;
+    quoteFontWarmed = true;
+    try { document.fonts && document.fonts.load('600 1em "Fraunces"'); } catch (e) {}
+  }
+
   function renderLobby(v) {
     show('lobby');
+    warmQuoteFont();
     const players = (v.lobby && v.lobby.players) || [];
     $('#lobby-count').textContent = plural(players.length, 'player', 'players') + ' so far';
     const list = $('#lobby-list');
@@ -331,6 +341,7 @@
 
   function renderIntro(v) {
     show('intro');
+    warmQuoteFont();
     const i = v.intro || {};
     $('#intro-1').textContent = i.yesnoRounds
       ? 'First ' + plural(i.yesnoRounds, 'quote', 'quotes') + ': is it from the Bible? Tap Bible or Not the Bible. You get ' + i.yesnoSeconds + ' seconds.'
@@ -567,7 +578,7 @@
     const secs = Math.ceil(left / 1000);
     for (const t of $$('.timer')) {
       if (t.closest('section').hidden) continue;
-      $('.bar > i', t).style.width = (frac * 100).toFixed(1) + '%';
+      $('.bar > i', t).style.transform = 'translateX(-' + ((1 - frac) * 100).toFixed(1) + '%)';
       $('.t-num', t).textContent = String(secs);
       t.classList.toggle('urgent', left <= 5000);
     }

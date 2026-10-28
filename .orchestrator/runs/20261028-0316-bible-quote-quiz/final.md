@@ -41,7 +41,7 @@ None
 - npm test script is `node --test test/*.test.js`.
 
 ## Open risks and follow-ups
-- The repo has no `main` branch yet; the PR needs one.
+- PR: https://github.com/fromtheashers/biblequiz/pull/1 (main created from the first commit).
 - UX performance audit requested by asher after the design thread's pass.
 - Codebase index requested by the index thread.
 

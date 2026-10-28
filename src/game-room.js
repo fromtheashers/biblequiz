@@ -99,6 +99,7 @@ export class GameRoom extends DurableObject {
     this.ctx = ctx;
     this.env = env;
     this.limiters = new WeakMap(); // ws -> limiter (resets after hibernation, which is fine)
+    this.lastSent = new Map(); // connId -> last view sent to that phone, minus clock fields (resets after hibernation, which is fine)
     this.armedFor = undefined; // the deadline the alarm is set for (undefined = unknown)
     this.engine = null;
 
@@ -162,7 +163,13 @@ export class GameRoom extends DurableObject {
         send(ws, hostView);
       } else if (att.role === 'player' && att.connId) {
         const view = this.engine.playerView(att.connId);
-        if (view) send(ws, { type: 'state', view });
+        if (!view) continue;
+        // Most changes (another player answering, a join) leave a phone's view as it was, apart
+        // from the clock fields. Skipping those sends keeps answer bursts fast with 50 phones.
+        const key = JSON.stringify({ ...view, serverNow: 0, version: 0 });
+        if (this.lastSent.get(att.connId) === key) continue;
+        this.lastSent.set(att.connId, key);
+        send(ws, { type: 'state', view });
       }
     }
   }
@@ -177,6 +184,7 @@ export class GameRoom extends DurableObject {
       if (id) byConn.set(id, ws);
     }
     for (const n of notices) {
+      this.lastSent.delete(n.connId);
       const ws = byConn.get(n.connId);
       if (!ws) continue;
       send(ws, { type: n.type });
@@ -302,6 +310,7 @@ export class GameRoom extends DurableObject {
     this.limiters.delete(ws);
     const att = attachmentOf(ws);
     if (att.role !== 'player' || !att.connId) return;
+    this.lastSent.delete(att.connId);
     try {
       ws.serializeAttachment({ role: 'player', connId: null });
     } catch {

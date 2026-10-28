@@ -33,3 +33,10 @@ Decision: RECOMMEND. Fails condition 2 (configuration) and touches the host-page
 IMP-4 · User experience
 Finding: phone question screen shows the round label twice (header "Round 1 of 15" and "ROUND 1 OF 15").
 Decision: RECOMMEND. Changes existing layout/wording (condition 4).
+
+## Step 4/5: results
+IMP-1 workstream (sonnet) executed candidates IMP-1 and IMP-2. Baseline files: baseline/public/host.js, baseline/public/shared.css (host.css changed by one fallback line; revert by deleting the `.host .toast` rule).
+- IMP-1 (toast above control bar): KEPT. Toast/button overlaps 3 → 0 at 1920x1080 and 1280x720; pointer-events auto → none. Orchestrator re-ran /tmp/imp1-check/m.cjs after: overlaps [] both sizes.
+- IMP-2 (keyed lobby chips): KEPT. New chip nodes when a 4th player joins 4 → 1; first 3 same nodes; off toggled in place. Orchestrator re-run confirms newNodes 1, sameFirst3 true.
+- Orchestrator polish found by the worker: `.chip` pop animation used fill `both`, which overrode `.chip.off { opacity: .5 }` (offline players never looked dimmed). Changed fill to `backwards` in shared.css.
+Regression checks (orchestrator): npm test 60/60; full-game e2e fails [] errors [].

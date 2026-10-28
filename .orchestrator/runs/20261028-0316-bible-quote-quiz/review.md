@@ -44,3 +44,5 @@ Observed: error toast sits over the control bar (covers buttons while shown) —
 - npm test: 60/60.
 - Cross-checks: README controls/shortcuts (Space/E/T/S/M, Start/Next/End timer early/+15 seconds/Skip/Reset) match host.js labels; podium button "New game" sends reset. Phone and host colours/shapes consistent (▲◆●■, same hexes).
 - Success criteria: 1 MET (60 tests), 2 MET (e2e 15 rounds), 3 MET (frame scan + worker tests 6/8), 4 MET (12 yes/no + 14 choose, sources.md), 5 MET (README + dry run), 6 MET (WS-4/WS-5 viewport checks + e2e at 375 and 1920).
+
+## IMP-1 — KEPT, 0 revisions (see improvements.md)

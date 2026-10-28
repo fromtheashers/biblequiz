@@ -78,7 +78,7 @@ kbd {
   background: rgba(255, 255, 255, 0.09); border: 1px solid var(--line);
   padding: 0.3em 0.8em; border-radius: 99px; font-weight: 700; max-width: 100%;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  animation: pop 0.25s ease-out both;
+  animation: pop 0.25s ease-out backwards; /* backwards, so .chip.off can still dim it afterwards */
 }
 .chip.off { opacity: 0.5; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -103,6 +103,7 @@ kbd {
   background: #2a1030; border: 1px solid var(--pink); color: #ffd6e8;
   padding: 0.7em 1.1em; border-radius: 12px; font-weight: 700; z-index: 50; max-width: 92vw; text-align: center;
   animation: pop 0.2s ease-out both; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 
 /* ---------- motion ---------- */

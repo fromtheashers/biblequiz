@@ -40,6 +40,9 @@
 
   function toast(msg) {
     const t = h('div', { class: 'toast', role: 'status' }, msg);
+    // sit just above the control bar so it never covers a button
+    const bar = $('#controls');
+    if (bar) t.style.bottom = Math.ceil(window.innerHeight - bar.getBoundingClientRect().top + 12) + 'px';
     document.body.append(t);
     setTimeout(() => t.remove(), 3500);
   }
@@ -328,8 +331,15 @@
     $('#lobby-hint').hidden = n > 0;
     memo('lobby', JSON.stringify(v.players.map((p) => [p.name, p.connected])), () => {
       const box = $('#lobby-chips');
-      box.textContent = '';
-      for (const p of v.players) box.append(h('span', { class: 'chip' + (p.connected ? '' : ' off') }, p.name));
+      const have = new Map($$('.chip', box).map((c) => [c.dataset.name, c]));
+      const keep = new Set(v.players.map((p) => p.name));
+      for (const [name, el] of have) if (!keep.has(name)) { el.remove(); have.delete(name); }
+      v.players.forEach((p, i) => {
+        let el = have.get(p.name);
+        if (!el) el = h('span', { class: 'chip', 'data-name': p.name }, p.name); // only new chips animate
+        el.classList.toggle('off', !p.connected);
+        if (box.children[i] !== el) box.insertBefore(el, box.children[i] || null);
+      });
     });
   }
 

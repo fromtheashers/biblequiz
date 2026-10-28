@@ -1,0 +1,32 @@
+{
+  // Cloudflare configuration for "Bible or Not?" (Workers Free plan friendly).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Must match the Worker's name in the Cloudflare dashboard.
+  "name": "biblequiz",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+
+  // The web pages. The Worker runs first for every request so it can guard the host page
+  // (/host, /host.html) and serve /ws, /qr.svg and /healthz; everything else is passed on
+  // to these files unchanged. questions.json is not in this folder and is never served.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+
+  // One Durable Object runs the one game.
+  "durable_objects": {
+    "bindings": [{ "name": "GAME_ROOM", "class_name": "GameRoom" }]
+  },
+  // SQLite-backed storage is what the Workers Free plan allows.
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }],
+
+  "observability": { "enabled": true }
+
+  // Optional settings (add them in the dashboard under Settings -> Variables and Secrets):
+  //   HOST_KEY        (Secret, required) the password in the host link
+  //   YESNO_SECONDS   seconds for an "Is this from the Bible?" question (default 15)
+  //   CHOOSE_SECONDS  seconds for a "Which one is from the Bible?" question (default 25)
+  //   PUBLIC_URL      the address the QR code points to (default: this site's own address)
+}

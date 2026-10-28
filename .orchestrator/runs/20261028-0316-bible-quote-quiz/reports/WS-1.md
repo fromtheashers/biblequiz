@@ -1,0 +1,6 @@
+STATUS: DONE
+(Report received 2026-10-28 from agent a456e5b876b902ee2; verbatim text kept in session transcript. Summary of claims:)
+- Deliverables: src/engine.js (createEngine, playerCommand, hostCommand, disconnect, hostView, playerView, nextDeadline, tick, version getter, takeNotices, connIds, toJSON/fromJSON; exports DEFAULT_CONFIG, PHASES, ERROR_CODES, errorMessage, SCHEMA, cleanText, nameKey, cpLen, scoreFor), docs/protocol.md, test/engine.test.js (43 tests).
+- All 8 criteria claimed MET. Verification: node --test 43/43 pass; grep for globals no matches; import prints function.
+- Assumptions: leaderboard after every round incl. last; spares after planned items; section only if both types; start needs >=1 player; kicked player removed fully (unknown_token); leave in lobby removes player; answer optional qid -> stale_question; notices not persisted (takeNotices after each command); saved config wins on restore; malformed items ignored; scoring uses final total time incl. added time; host view during question shows count only; podium host view has rounds recap.
+- Open: ran read-only git status (not permitted, no change). Server must implement ack envelope {type:"ack",for,ok}, id echo, replaced & rate_limited messages, HTTP 403 for wrong host key.

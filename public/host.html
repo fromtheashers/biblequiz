@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Bible or Not? - Host screen</title>
+  <link rel="stylesheet" href="/shared.css">
+  <link rel="stylesheet" href="/host.css">
+</head>
+<body class="host">
+  <header id="top">
+    <div class="brand">Bible <span>or Not?</span></div>
+    <div id="phase-label" class="phase"></div>
+    <div class="spacer"></div>
+    <span id="sound-hint" class="sound-hint">🔊 Click anywhere to enable sound</span>
+    <span id="reconnect" class="reconnect" role="status" hidden>Reconnecting…</span>
+    <span id="conn-dot" class="dot" title="Connection to the server"></span>
+    <button id="btn-music" class="btn ghost small" type="button" title="Background music on or off">🎵</button>
+    <input id="vol-music" type="range" min="0" max="100" value="100" title="Music volume" aria-label="Music volume">
+    <button id="btn-duck" class="btn ghost small" type="button" title="Quiet the music while you talk (shortcut: M)">🎤 <kbd>M</kbd></button>
+    <button id="btn-sound" class="btn ghost small" type="button" title="Sound effects on or off">🔊</button>
+    <button id="btn-panel" class="btn ghost small" type="button" title="Show or hide the players panel">👥 Players</button>
+    <button id="btn-full" class="btn ghost small" type="button" title="Full screen">⛶</button>
+  </header>
+
+  <div class="layout">
+    <main id="stage">
+      <section id="v-connect" class="center">
+        <h1 id="connect-title">Connecting…</h1>
+        <p id="connect-text" class="muted"></p>
+      </section>
+
+      <section id="v-lobby" hidden>
+        <div class="lobby-grid">
+          <div class="qr-card">
+            <img id="qr" src="/qr.svg" alt="QR code to join the game">
+          </div>
+          <div class="lobby-info">
+            <h1>Scan to join!</h1>
+            <div class="join-url">or go to <b id="joinurl"></b></div>
+            <div class="count"><b id="lobby-count">0</b> <span>players joined</span></div>
+            <div id="lobby-chips" class="chips big"></div>
+            <div id="lobby-hint" class="hint-line">Waiting for the first player…</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="v-intro" hidden>
+        <div class="intro">
+          <h1>How to play</h1>
+          <ol class="rules" id="intro-rules"></ol>
+          <div class="ready-hint">When everyone is ready, press <kbd>Space</kbd> or the button below.</div>
+        </div>
+      </section>
+
+      <section id="v-question" hidden>
+        <div class="qhead">
+          <span class="rbadge" id="q-round"></span>
+          <span class="badge-dbl" id="q-dbl" hidden>DOUBLE POINTS ×2</span>
+          <span class="spacer"></span>
+          <span class="answered"><b id="q-answered">0</b> of <span id="q-expected">0</span> answered</span>
+        </div>
+        <h2 class="prompt" id="q-prompt"></h2>
+        <div id="q-yesno" hidden>
+          <blockquote class="bigquote" id="q-quote"></blockquote>
+          <div class="yn-row">
+            <div class="yn yn-yes"><span class="sym">📖</span><span class="lab">Bible</span></div>
+            <div class="yn yn-no"><span class="sym">💬</span><span class="lab">Not the Bible</span></div>
+          </div>
+        </div>
+        <div id="q-choose" class="tiles" hidden></div>
+        <div class="timer big" id="q-timer"><span class="t-num"></span><div class="bar"><i></i></div></div>
+      </section>
+
+      <section id="v-reveal" hidden>
+        <div class="qhead">
+          <span class="rbadge" id="r-round"></span>
+          <span class="badge-dbl" id="r-dbl" hidden>DOUBLE POINTS ×2</span>
+          <span class="spacer"></span>
+          <span class="answered" id="r-fastest"></span>
+        </div>
+        <h2 class="prompt" id="r-headline"></h2>
+        <div id="r-body"></div>
+        <p class="note" id="r-note"></p>
+      </section>
+
+      <section id="v-leaderboard" hidden>
+        <h1 class="slide-title">Leaderboard</h1>
+        <div id="lb-list" class="board"></div>
+        <p class="muted lb-foot" id="lb-foot"></p>
+      </section>
+
+      <section id="v-section" hidden class="center">
+        <div class="section-slide">
+          <div class="sec-kicker" id="sec-kicker">Round 2</div>
+          <h1 class="sec-title" id="sec-title">Find the Bible verse</h1>
+          <p class="sec-sub">Four quotes, one is from the Bible. Find it!</p>
+          <p class="muted sec-meta" id="sec-meta"></p>
+        </div>
+      </section>
+
+      <section id="v-podium" hidden>
+        <div id="podium-root"></div>
+      </section>
+    </main>
+
+    <aside id="panel">
+      <h3>Players <span id="panel-count"></span></h3>
+      <div id="plist"></div>
+    </aside>
+  </div>
+
+  <footer id="controls"></footer>
+
+
+  <script src="/music.js"></script>
+  <script src="/host.js"></script>
+</body>
+</html>

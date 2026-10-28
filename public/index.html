@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1022">
+  <title>Bible or Not?</title>
+  <link rel="stylesheet" href="/phone.css">
+</head>
+<body>
+  <div id="conn" role="status" hidden>Reconnecting…</div>
+
+  <header id="top" hidden>
+    <button id="me-edit" class="namebtn" type="button" aria-label="Change your name"><span id="me-name"></span><span class="pen" id="me-pen" aria-hidden="true">✏️</span></button>
+    <span id="round"></span>
+    <span id="me-score"></span>
+  </header>
+
+  <main>
+    <!-- CONNECTING -->
+    <section id="s-wait" class="hero" hidden>
+      <div class="big-emoji" aria-hidden="true">⏳</div>
+      <h2>Connecting…</h2>
+    </section>
+
+    <!-- JOIN -->
+    <section id="s-join" class="hero" hidden>
+      <div class="logo">Bible <span>or Not?</span></div>
+      <p class="lead">Type a name to join the game.</p>
+      <form id="join-form" autocomplete="off">
+        <input id="name-input" class="field" type="text" placeholder="Your name" autocomplete="off" autocapitalize="words" spellcheck="false" aria-label="Your name" aria-describedby="join-error" enterkeyhint="go">
+        <div class="row"><span id="join-error" class="err" role="alert"></span><span id="join-count" class="count">0/15</span></div>
+        <button id="join-btn" class="btn full" type="submit">Join</button>
+      </form>
+    </section>
+
+    <!-- LOBBY -->
+    <section id="s-lobby" class="center" hidden>
+      <div class="big-emoji" aria-hidden="true">🙌</div>
+      <h2>You're in!</h2>
+      <p class="lead">Watch the big screen. The host will start the game soon.</p>
+      <div class="card">
+        <h3 id="lobby-count" class="kicker"></h3>
+        <ul id="lobby-list" class="chips"></ul>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section id="s-intro" hidden>
+      <h2 class="center">How to play</h2>
+      <div class="card step"><span class="ico" aria-hidden="true">📖</span><p id="intro-1"></p></div>
+      <div class="card step"><span class="ico" aria-hidden="true">🔎</span><p id="intro-2"></p></div>
+      <div class="card step"><span class="ico" aria-hidden="true">⚡</span><p id="intro-3"></p></div>
+      <p class="muted center">Get ready. The first question is coming up.</p>
+    </section>
+
+    <!-- QUESTION: yes / no -->
+    <section id="s-yesno" hidden>
+      <div class="kicker" id="yn-kicker"></div>
+      <div class="timer"><div class="bar"><i></i></div><span class="t-num"></span></div>
+      <p class="ask">Is this from the Bible?</p>
+      <blockquote id="yn-quote" class="quote"></blockquote>
+      <div class="answers" id="yn-buttons">
+        <button type="button" class="ans yes" data-answer="true"><span class="shape" aria-hidden="true">📖</span><span class="lbl">Bible</span></button>
+        <button type="button" class="ans no" data-answer="false"><span class="shape" aria-hidden="true">💬</span><span class="lbl">Not the Bible</span></button>
+      </div>
+      <p class="err center q-error" role="alert"></p>
+    </section>
+
+    <!-- QUESTION: choose -->
+    <section id="s-choose" hidden>
+      <div class="kicker" id="ch-kicker"></div>
+      <div class="timer"><div class="bar"><i></i></div><span class="t-num"></span></div>
+      <p class="ask">Which one is from the Bible?</p>
+      <div class="tiles" id="ch-tiles"></div>
+      <p class="err center q-error" role="alert"></p>
+    </section>
+
+    <!-- ANSWERED -->
+    <section id="s-locked" class="center" hidden>
+      <div class="kicker" id="lk-kicker"></div>
+      <div class="timer"><div class="bar"><i></i></div><span class="t-num"></span></div>
+      <div class="big-emoji" aria-hidden="true">🔒</div>
+      <h2>Answer locked in</h2>
+      <div id="lk-pick" class="pick"></div>
+      <p class="muted waiting">Waiting for the others…</p>
+    </section>
+
+    <!-- REVEAL / LEADERBOARD -->
+    <section id="s-reveal" hidden>
+      <div class="kicker" id="rv-kicker"></div>
+      <div id="rv-verdict" class="verdict"><span class="vmark" aria-hidden="true"></span><span class="vtext"></span></div>
+      <div id="rv-dbl" class="center" hidden><span class="badge-dbl">⭐ Double points!</span></div>
+      <p id="rv-points" class="points"></p>
+      <p id="rv-streak" class="streak" hidden></p>
+      <div class="card stats">
+        <div><span class="lab">Total score</span><b id="rv-score"></b></div>
+        <div><span class="lab">Your place</span><b id="rv-rank"></b></div>
+      </div>
+      <p id="rv-move" class="move" hidden></p>
+      <div class="card" id="rv-answer">
+        <h3 class="kicker" id="rv-ans-head"></h3>
+        <p id="rv-ans-quote" class="rv-quote"></p>
+        <p id="rv-ans-source" class="muted"></p>
+        <div id="rv-mine" hidden>
+          <h3 class="kicker">You picked</h3>
+          <p id="rv-mine-quote" class="rv-quote"></p>
+          <p id="rv-mine-source" class="muted"></p>
+        </div>
+        <p id="rv-note" class="note"></p>
+        <p id="rv-stats" class="muted small"></p>
+      </div>
+      <p id="rv-next" class="muted center"></p>
+    </section>
+
+    <!-- SECTION -->
+    <section id="s-section" class="center" hidden>
+      <div class="big-emoji" aria-hidden="true">🔎</div>
+      <h2 id="sec-title"></h2>
+      <p class="lead" id="sec-text"></p>
+    </section>
+
+    <!-- PODIUM -->
+    <section id="s-podium" class="center" hidden>
+      <div id="confetti" aria-hidden="true"></div>
+      <div class="big-emoji" id="pd-medal" aria-hidden="true"></div>
+      <h2 id="pd-title"></h2>
+      <p class="lead" id="pd-sub"></p>
+      <div class="card stats">
+        <div><span class="lab">Final score</span><b id="pd-score"></b></div>
+        <div><span class="lab">Place</span><b id="pd-rank"></b></div>
+      </div>
+    </section>
+
+    <!-- MESSAGE (kicked / replaced) -->
+    <section id="s-msg" class="hero" hidden>
+      <div class="big-emoji" aria-hidden="true">👋</div>
+      <h2 id="msg-text"></h2>
+      <button id="msg-btn" class="btn full" type="button" hidden>Join again</button>
+    </section>
+  </main>
+
+  <!-- RENAME -->
+  <div id="rename" class="overlay" hidden>
+    <form class="sheet" id="rename-form" autocomplete="off">
+      <h3>Change your name</h3>
+      <input id="rename-input" class="field" type="text" autocomplete="off" spellcheck="false" aria-label="New name" enterkeyhint="done">
+      <div class="row"><span id="rename-error" class="err" role="alert"></span><span id="rename-count" class="count">0/15</span></div>
+      <div class="btns">
+        <button type="button" id="rename-cancel" class="btn ghost">Cancel</button>
+        <button type="submit" id="rename-save" class="btn">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="/phone.js"></script>
+</body>
+</html>

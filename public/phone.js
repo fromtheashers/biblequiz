@@ -567,7 +567,7 @@
     const secs = Math.ceil(left / 1000);
     for (const t of $$('.timer')) {
       if (t.closest('section').hidden) continue;
-      $('.bar > i', t).style.width = (frac * 100).toFixed(1) + '%';
+      $('.bar > i', t).style.transform = 'translateX(-' + ((1 - frac) * 100).toFixed(1) + '%)';
       $('.t-num', t).textContent = String(secs);
       t.classList.toggle('urgent', left <= 5000);
     }

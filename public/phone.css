@@ -1,4 +1,18 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
 :root {
+  --font-ui: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* every quote, Bible or not, is set in the same book face, so the type gives nothing away */
+  --font-quote: "Fraunces", Georgia, "Times New Roman", serif;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --bg: #0c1022;
   --card: #1b2250;
   --card2: #252e68;
@@ -29,14 +43,16 @@ body {
     var(--bg);
   background-attachment: fixed;
   color: var(--ink);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-ui);
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   overflow-x: hidden;
 }
 [hidden] { display: none !important; }
-h1, h2, h3 { margin: 0; line-height: 1.15; }
+h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -0.015em; }
+html { scrollbar-color: rgba(255, 255, 255, 0.22) transparent; }
+::selection { background: var(--teal); color: #04201b; }
 p { margin: 0; }
 ul { list-style: none; margin: 0; padding: 0; }
 button, input { font: inherit; color: inherit; }
@@ -45,7 +61,7 @@ button { cursor: pointer; touch-action: manipulation; }
 
 /* ---------- layout ---------- */
 main { padding: 18px 16px 40px; max-width: 600px; margin: 0 auto; }
-main > section { animation: rise 0.25s ease-out both; }
+main > section { animation: rise 0.25s var(--ease-out) both; }
 .center { text-align: center; }
 .hero { text-align: center; padding-top: 5vh; }
 .logo { font-size: 3rem; font-weight: 900; letter-spacing: -0.02em; line-height: 1.05; }
@@ -79,6 +95,7 @@ section > .kicker { margin: 2px 0 8px; }
 .field {
   width: 100%; background: rgba(255, 255, 255, 0.08); border: 2px solid var(--line); border-radius: 14px;
   padding: 0.85em 1em; font-size: 1.25rem; font-weight: 700; text-align: center; outline: none;
+  caret-color: var(--teal); transition: border-color 150ms ease;
 }
 .field:focus { border-color: var(--teal); }
 .row { display: flex; justify-content: space-between; align-items: flex-start; margin: 8px 2px 14px; gap: 10px; text-align: left; }
@@ -88,7 +105,7 @@ section > .kicker { margin: 2px 0 8px; }
   background: linear-gradient(180deg, #7b5cff, #5b34c4); border: 0; color: #fff; font-weight: 800;
   padding: 0.85em 1.4em; min-height: 52px; border-radius: 14px;
   box-shadow: 0 5px 0 #3a1f8a, 0 10px 22px rgba(0, 0, 0, 0.35);
-  transition: transform 0.06s, box-shadow 0.06s, opacity 0.15s;
+  transition: transform 120ms var(--ease-out), box-shadow 120ms var(--ease-out), opacity 150ms ease;
 }
 .btn:active { transform: translateY(4px); box-shadow: 0 1px 0 #3a1f8a; }
 .btn[disabled] { opacity: 0.5; box-shadow: none; cursor: not-allowed; transform: none; }
@@ -120,7 +137,11 @@ section > .kicker { margin: 2px 0 8px; }
 .timer { display: flex; align-items: center; gap: 12px; margin: 4px 0 12px; }
 .timer .t-num { font-weight: 900; font-variant-numeric: tabular-nums; min-width: 2.2em; text-align: right; font-size: 1.4rem; }
 .bar { flex: 1; height: 12px; border-radius: 99px; background: rgba(255, 255, 255, 0.14); overflow: hidden; }
-.bar > i { display: block; height: 100%; width: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--teal), var(--yellow)); }
+.bar > i {
+  display: block; height: 100%; width: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--teal), var(--yellow));
+  /* phone.js slides the bar left with transform, so the countdown never triggers layout */
+  transform: translateX(0); transition: transform 150ms linear; will-change: transform;
+}
 .timer.urgent .bar > i { background: linear-gradient(90deg, var(--red), var(--pink)); }
 .timer.urgent .t-num { color: var(--red); }
 .badge-dbl {
@@ -133,13 +154,15 @@ section > .kicker { margin: 2px 0 8px; }
 .quote {
   margin: 0 0 16px; padding: 16px; border-radius: 16px; border: 1px solid var(--line);
   background: linear-gradient(160deg, var(--card2), var(--card));
-  font-size: 1.4rem; line-height: 1.35; font-weight: 600; overflow-wrap: anywhere;
+  font-family: var(--font-quote); font-size: 1.4rem; line-height: 1.3; font-weight: 600; overflow-wrap: anywhere; text-wrap: pretty;
 }
+.quote::before { content: '“'; color: var(--yellow); }
+.quote::after { content: '”'; color: var(--yellow); }
 .answers { display: grid; gap: 12px; }
 .ans, .tile {
   display: flex; align-items: center; gap: 14px; width: 100%; border: 0; border-radius: 16px;
   color: #fff; text-align: left; box-shadow: 0 5px 0 rgba(0, 0, 0, 0.35);
-  transition: transform 0.06s, box-shadow 0.06s, opacity 0.15s;
+  transition: transform 120ms var(--ease-out), box-shadow 120ms var(--ease-out), opacity 150ms ease;
 }
 .ans:active, .tile:active { transform: translateY(4px); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35); }
 .ans[disabled], .tile[disabled] { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
@@ -150,7 +173,7 @@ section > .kicker { margin: 2px 0 8px; }
 .tiles { display: grid; gap: 10px; grid-template-columns: 1fr; }
 .tile { min-height: 64px; padding: 14px 16px; font-size: 1.15rem; line-height: 1.3; font-weight: 700; }
 .tile .shape { flex: none; width: 2.2rem; text-align: center; font-size: 1.7rem; line-height: 1; }
-.tile .txt { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.tile .txt { flex: 1; min-width: 0; overflow-wrap: anywhere; font-family: var(--font-quote); font-weight: 600; line-height: 1.25; }
 .t0 { background: var(--c0); }
 .t1 { background: var(--c1); }
 .t2 { background: var(--c2); }
@@ -178,7 +201,7 @@ section > .kicker { margin: 2px 0 8px; }
 .move.up { color: var(--green); }
 .move.down { color: var(--red); }
 .move.same { color: var(--muted); }
-.rv-quote { font-size: 1.15rem; line-height: 1.35; font-weight: 600; margin: 6px 0 4px; overflow-wrap: anywhere; }
+.rv-quote { font-family: var(--font-quote); font-size: 1.2rem; line-height: 1.3; font-weight: 600; margin: 6px 0 4px; overflow-wrap: anywhere; }
 #rv-answer .kicker { margin-top: 0; }
 #rv-answer p.muted, #rv-note { overflow-wrap: anywhere; }
 #rv-mine { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }

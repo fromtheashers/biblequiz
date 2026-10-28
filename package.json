@@ -1,0 +1,13 @@
+{
+  "name": "bible-or-not",
+  "version": "1.0.0",
+  "description": "A Kahoot-style party game: is this quote from the Bible or not?",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

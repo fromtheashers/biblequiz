@@ -734,7 +734,8 @@
     const left = Math.max(0, V.deadline - (Date.now() + offset));
     const secs = Math.ceil(left / 1000);
     $('.t-num', el).textContent = secs;
-    $('.bar > i', el).style.width = ((100 * left) / (V.timerTotal || 1)).toFixed(1) + '%';
+    const used = 100 - Math.min(100, (100 * left) / (V.timerTotal || 1));
+    $('.bar > i', el).style.transform = 'translateX(-' + used.toFixed(1) + '%)';
     const urgent = left <= 5000;
     el.classList.toggle('urgent', urgent);
     music.setUrgent(urgent);

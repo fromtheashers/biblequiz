@@ -50,9 +50,9 @@ test('top-level shape', () => {
   assert.ok(Array.isArray(bank.choose), 'choose must be an array');
 });
 
-test('bank sizes: at least 10 yes/no and 13 choose items', () => {
-  assert.ok(bank.yesno.length >= 10, `only ${bank.yesno.length} yes/no items`);
-  assert.ok(bank.choose.length >= 13, `only ${bank.choose.length} choose items`);
+test('bank sizes: at least 28 yes/no and 42 choose items', () => {
+  assert.ok(bank.yesno.length >= 28, `only ${bank.yesno.length} yes/no items`);
+  assert.ok(bank.choose.length >= 42, `only ${bank.choose.length} choose items`);
 });
 
 test('yes/no items match the schema', () => {

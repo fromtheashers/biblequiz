@@ -1,0 +1,159 @@
+{
+  "translation": "KJV",
+  "yesno": [
+    { "type": "yesno", "quote": "Pride goeth before destruction, and an haughty spirit before a fall.", "isBible": true, "source": "Proverbs 16:18 (KJV)", "note": "Often shortened to \"Pride comes before a fall.\"" },
+    { "type": "yesno", "quote": "God helps those who help themselves.", "isBible": false, "source": "Algernon Sidney, Discourses Concerning Government (1698); popularised by Benjamin Franklin, Poor Richard's Almanack (1736)", "note": "Polls find many people think this is in the Bible. It is not." },
+    { "type": "yesno", "quote": "The wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.", "isBible": true, "source": "Romans 6:23 (KJV)", "note": "Paul, writing to the church in Rome." },
+    { "type": "yesno", "quote": "Cleanliness is next to godliness.", "isBible": false, "source": "Old proverb, made famous by John Wesley, sermon \"On Dress\" (c. 1791)", "note": "Sounds biblical, but it's not in the Bible. John Wesley quoted it as a saying in a sermon." },
+    { "type": "yesno", "quote": "This too shall pass.", "isBible": false, "source": "Fable from medieval Persian Sufi poets; retold by Edward FitzGerald (1852) and Abraham Lincoln (1859)", "note": "Not in the Bible. It comes from a Persian fable about a king's ring, later tied to Solomon in folklore." },
+    { "type": "yesno", "quote": "I am escaped with the skin of my teeth.", "isBible": true, "source": "Job 19:20 (KJV)", "note": "Job is where the phrase \"by the skin of my teeth\" comes from." },
+    { "type": "yesno", "quote": "Love the sinner, hate the sin.", "isBible": false, "source": "Saying based on St Augustine, Letter 211 (c. 424): \"with love for mankind and hatred of sins\"", "note": "Not a Bible verse. The idea goes back to St Augustine, writing around AD 424." },
+    { "type": "yesno", "quote": "A soft answer turneth away wrath: but grievous words stir up anger.", "isBible": true, "source": "Proverbs 15:1 (KJV)" },
+    { "type": "yesno", "quote": "The Lord works in mysterious ways.", "isBible": false, "source": "Popular paraphrase of William Cowper, hymn \"Light Shining out of Darkness\", Olney Hymns (1779)", "note": "Not in the Bible. It echoes Cowper's hymn line \"God moves in a mysterious way.\"" },
+    { "type": "yesno", "quote": "Can a man take fire in his bosom, and his clothes not be burned?", "isBible": true, "source": "Proverbs 6:27 (KJV)", "note": "A warning in Proverbs that some choices always bring consequences." },
+    { "type": "yesno", "quote": "Spare the rod and spoil the child.", "isBible": false, "source": "Samuel Butler, Hudibras (1663)", "note": "Not in the Bible as worded. Proverbs 13:24 says \"He that spareth his rod hateth his son.\"" },
+    { "type": "yesno", "quote": "Is there no balm in Gilead; is there no physician there?", "isBible": true, "source": "Jeremiah 8:22 (KJV)", "note": "The prophet Jeremiah, grieving over his people." }
+  ],
+  "choose": [
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "This above all: to thine own self be true.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 1 Scene 3 (c. 1600)" },
+        { "quote": "Thou shalt love thy neighbour as thyself.", "isBible": true, "source": "Matthew 22:39 (KJV)" },
+        { "quote": "Neither a borrower nor a lender be.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 1 Scene 3 (c. 1600)" },
+        { "quote": "Brevity is the soul of wit.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 2 Scene 2 (c. 1600)" }
+      ],
+      "note": "Jesus called this the second great commandment. All three decoys are Polonius in Hamlet."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "Be sure your sin will find you out.", "isBible": true, "source": "Numbers 32:23 (KJV)" },
+        { "quote": "Honesty is the best policy.", "isBible": false, "source": "English proverb, first recorded in Sir Edwin Sandys, Europae Speculum (1599)" },
+        { "quote": "Charity begins at home.", "isBible": false, "source": "English proverb; modern form first printed in Sir Thomas Browne, Religio Medici (1642)" },
+        { "quote": "Early to bed and early to rise, makes a man healthy, wealthy and wise.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack, collected in The Way to Wealth (1758)" }
+      ],
+      "note": "Moses' warning in Numbers 32:23. \"Charity begins at home\" is a proverb, not a verse."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "An apple a day keeps the doctor away.", "isBible": false, "source": "Welsh proverb, recorded in Pembrokeshire (1866); modern wording from the 1880s" },
+        { "quote": "God heals, and the doctor takes the fees.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack (1736)" },
+        { "quote": "Physician, heal thyself.", "isBible": true, "source": "Luke 4:23 (KJV)" },
+        { "quote": "There's more old drunkards than old doctors.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack (1736)" }
+      ],
+      "note": "Jesus quotes this proverb in Luke 4:23. The other two doctor jokes are Ben Franklin's."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "There is a tide in the affairs of men, which, taken at the flood, leads on to fortune.", "isBible": false, "source": "William Shakespeare, Julius Caesar, Act 4 Scene 3 (1599)" },
+        { "quote": "All the world's a stage, and all the men and women merely players.", "isBible": false, "source": "William Shakespeare, As You Like It, Act 2 Scene 7 (c. 1599)" },
+        { "quote": "The quality of mercy is not strain'd; it droppeth as the gentle rain from heaven.", "isBible": false, "source": "William Shakespeare, The Merchant of Venice, Act 4 Scene 1 (c. 1597)" },
+        { "quote": "To every thing there is a season, and a time to every purpose under the heaven.", "isBible": true, "source": "Ecclesiastes 3:1 (KJV)" }
+      ],
+      "note": "Ecclesiastes 3:1, just before \"A time to be born, and a time to die.\" The rest are Shakespeare."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "Moderation in all things.", "isBible": false, "source": "Proverb echoing the ancient Greek maxim \"Nothing in excess\" (Delphi); exact wording of later origin" },
+        { "quote": "Whatsoever a man soweth, that shall he also reap.", "isBible": true, "source": "Galatians 6:7 (KJV)" },
+        { "quote": "Fortune favours the bold.", "isBible": false, "source": "Latin proverb, found in Terence, Phormio (151 BC)" },
+        { "quote": "Every cloud has a silver lining.", "isBible": false, "source": "Proverb based on John Milton, Comus (1634)" }
+      ],
+      "note": "Galatians 6:7 is where \"you reap what you sow\" comes from."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "To err is human, to forgive divine.", "isBible": false, "source": "Alexander Pope, An Essay on Criticism (1711)" },
+        { "quote": "A little learning is a dang'rous thing.", "isBible": false, "source": "Alexander Pope, An Essay on Criticism (1711)" },
+        { "quote": "Well done is better than well said.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack" },
+        { "quote": "Man shall not live by bread alone.", "isBible": true, "source": "Matthew 4:4 (KJV)" }
+      ],
+      "note": "Jesus answering the tempter in Matthew 4:4, quoting Deuteronomy 8:3."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "He that is down, needs fear no fall; he that is low, no pride.", "isBible": false, "source": "John Bunyan, The Pilgrim's Progress, Part II, the shepherd boy's song (1684)" },
+        { "quote": "Cast thy bread upon the waters: for thou shalt find it after many days.", "isBible": true, "source": "Ecclesiastes 11:1 (KJV)" },
+        { "quote": "The mind is its own place, and in itself can make a heav'n of hell, a hell of heav'n.", "isBible": false, "source": "John Milton, Paradise Lost, Book 1 (1667)" },
+        { "quote": "Man proposes, but God disposes.", "isBible": false, "source": "Thomas à Kempis, The Imitation of Christ, Book 1 Chapter 19 (c. 1420)" }
+      ],
+      "note": "Ecclesiastes 11:1. The decoys come from John Bunyan, John Milton and Thomas à Kempis."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "The better part of valour is discretion.", "isBible": false, "source": "William Shakespeare, Henry IV Part 1, Act 5 Scene 4 (c. 1597)" },
+        { "quote": "Fools rush in where angels fear to tread.", "isBible": false, "source": "Alexander Pope, An Essay on Criticism (1711)" },
+        { "quote": "Cowards die many times before their deaths; the valiant never taste of death but once.", "isBible": false, "source": "William Shakespeare, Julius Caesar, Act 2 Scene 2 (1599)" },
+        { "quote": "The race is not to the swift, nor the battle to the strong.", "isBible": true, "source": "Ecclesiastes 9:11 (KJV)" }
+      ],
+      "note": "Ecclesiastes 9:11 goes on: \"but time and chance happeneth to them all.\""
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "Diligence is the mother of good luck.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack (1736)" },
+        { "quote": "Go to the ant, thou sluggard; consider her ways, and be wise.", "isBible": true, "source": "Proverbs 6:6 (KJV)" },
+        { "quote": "Little strokes fell great oaks.", "isBible": false, "source": "Benjamin Franklin, The Way to Wealth (1758)" },
+        { "quote": "Lost time is never found again.", "isBible": false, "source": "Benjamin Franklin, The Way to Wealth (1758)" }
+      ],
+      "note": "Proverbs 6:6. The three decoys are all from Benjamin Franklin's Poor Richard."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "Hope springs eternal in the human breast.", "isBible": false, "source": "Alexander Pope, An Essay on Man, Epistle 1 (1733)" },
+        { "quote": "They also serve who only stand and wait.", "isBible": false, "source": "John Milton, sonnet \"When I consider how my light is spent\" (published 1673)" },
+        { "quote": "The course of true love never did run smooth.", "isBible": false, "source": "William Shakespeare, A Midsummer Night's Dream, Act 1 Scene 1 (c. 1595)" },
+        { "quote": "Hope deferred maketh the heart sick.", "isBible": true, "source": "Proverbs 13:12 (KJV)" }
+      ],
+      "note": "Proverbs 13:12. Pope, Milton and Shakespeare supplied the decoys."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "With coarse rice to eat, with water to drink, and my bended arm for a pillow; I have still joy in the midst of these things.", "isBible": false, "source": "Confucius, Analects, Book 7 (James Legge translation)" },
+        { "quote": "Better is a dinner of herbs where love is, than a stalled ox and hatred therewith.", "isBible": true, "source": "Proverbs 15:17 (KJV)" },
+        { "quote": "It is not the man who has too little, but the man who craves more, that is poor.", "isBible": false, "source": "Seneca, Moral Letters to Lucilius, Letter 2 (Richard Gummere translation)" },
+        { "quote": "Very little is needed to make a happy life.", "isBible": false, "source": "Marcus Aurelius, Meditations, Book 7.67 (English translation)" }
+      ],
+      "note": "Proverbs 15:17: a simple meal with love beats a feast with hatred."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "No man is an island, entire of itself.", "isBible": false, "source": "John Donne, Devotions upon Emergent Occasions, Meditation 17 (1624)" },
+        { "quote": "Two heads are better than one.", "isBible": false, "source": "English proverb, recorded in John Heywood's book of proverbs (1546)" },
+        { "quote": "A threefold cord is not quickly broken.", "isBible": true, "source": "Ecclesiastes 4:12 (KJV)" },
+        { "quote": "United we stand, divided we fall.", "isBible": false, "source": "Idea from Aesop's fables; slogan from John Dickinson, \"The Liberty Song\" (1768)" }
+      ],
+      "note": "Ecclesiastes 4:12. Verse 9 says \"Two are better than one\", but never \"two heads\"."
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "Answer a fool according to his folly, lest he be wise in his own conceit.", "isBible": true, "source": "Proverbs 26:5 (KJV)" },
+        { "quote": "Better a witty fool than a foolish wit.", "isBible": false, "source": "William Shakespeare, Twelfth Night, Act 1 Scene 5 (c. 1601)" },
+        { "quote": "The fool doth think he is wise, but the wise man knows himself to be a fool.", "isBible": false, "source": "William Shakespeare, As You Like It, Act 5 Scene 1 (c. 1599)" },
+        { "quote": "Experience keeps a dear school, but fools will learn in no other.", "isBible": false, "source": "Benjamin Franklin, The Way to Wealth (1758)" }
+      ],
+      "note": "Proverbs 26:5. The verse right before it says \"Answer not a fool according to his folly.\""
+    },
+    {
+      "type": "choose",
+      "options": [
+        { "quote": "The unexamined life is not worth living.", "isBible": false, "source": "Socrates at his trial, as reported by Plato, Apology 38a" },
+        { "quote": "Long is the way and hard, that out of Hell leads up to light.", "isBible": false, "source": "John Milton, Paradise Lost, Book 2 (1667)" },
+        { "quote": "We are such stuff as dreams are made on; and our little life is rounded with a sleep.", "isBible": false, "source": "William Shakespeare, The Tempest, Act 4 Scene 1 (c. 1611)" },
+        { "quote": "Now we see through a glass, darkly; but then face to face.", "isBible": true, "source": "1 Corinthians 13:12 (KJV)" }
+      ],
+      "note": "Paul in 1 Corinthians 13:12, part of the famous chapter on love."
+    }
+  ]
+}

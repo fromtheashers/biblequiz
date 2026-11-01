@@ -1,11 +1,12 @@
 # Bible or Not?
 
-A party game for one big screen (a TV or projector) and everyone's phones, a bit like Kahoot. A quote appears on the screen and everyone guesses on their phone: **is it from the Bible, or not?** Lots of famous sayings sound biblical but are not, and some odd-sounding lines really are in there.
+A party game for one big screen (a TV or projector) and everyone's phones, a bit like Kahoot. A quote appears on the screen and everyone guesses on their phone: **is it from the Bible, or not?** The quotes are deliberately tricky: some real verses sound like song lyrics or famous quotes, and some lyrics and famous quotes sound like they come from the Bible.
 
 - **Players:** up to 50. They join by scanning a QR code on the TV and typing a name. Nobody signs up for anything.
 - **Rounds:** 15 in total.
   - Rounds 1 to 6: **"Is this from the Bible?"** One quote, two buttons: *Bible* or *Not the Bible*. 15 seconds.
   - Rounds 7 to 15: **"Which one is from the Bible?"** Four quotes, exactly one is from the Bible. 25 seconds.
+  - Every game draws its 6 yes/no and 9 pick-one questions at random from the whole pool (currently 28 + 42). A room does not repeat a question until it has used them all.
 - **Each round:** the quote appears and the timer runs → phones answer (the first tap counts) → when the time is up, or everyone has answered, the answer is revealed with where the quote really comes from → leaderboard → next round.
 - **Scoring:** a right answer is worth between 1000 points (instant) and 500 points (at the last second). A wrong answer or no answer is 0. Rounds 13, 14 and 15 are worth double.
 - **Finale:** a podium with the top three, tied players share a place.
@@ -115,7 +116,7 @@ Every time you change a file on GitHub (in the `main` branch), Cloudflare builds
 3. Each question ends by itself when the timer runs out or when everyone has answered. While a question is running you can use:
    - **End timer early**: stop the question now and show the answer.
    - **+15 seconds**: add 15 seconds to the timer (as often as you like).
-   - **Skip question**: throw this question away and use a spare one of the same kind (all answers for it are discarded).
+   - **Skip question**: throw this question away and use another unused question of the same kind (all answers for it are discarded).
 4. After the answer is shown, press **Next** for the leaderboard, then **Next** again for the next question. Before round 7 a slide announces the second part ("Find the Bible verse").
 5. After the last round's leaderboard press **Final results** for the podium.
 6. Any time:
@@ -128,7 +129,7 @@ Players can change their name while they are in the lobby. Names lock when you p
 
 ## Changing the questions
 
-The questions are in `questions.json`. The game uses the first 6 "Is this from the Bible?" items and the first 9 "Which one is from the Bible?" items. Any extra items after those are spares for **Skip question**.
+The questions are in `questions.json`. The order in the file does not matter: every game picks 6 "Is this from the Bible?" items and 9 "Which one is from the Bible?" items at random, and **Skip question** takes another one from the rest. Keep at least 6 yes/no items and 9 choose items in the file. The more items you add, the more variety players get before a question comes back.
 
 To change them on GitHub:
 

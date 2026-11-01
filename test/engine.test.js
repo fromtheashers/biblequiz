@@ -59,6 +59,8 @@ const okHost = (engine, type, extra) => {
   assert.equal(res.ok, true, `${type}: ${res.error}`);
   return res;
 };
+// item indices of the current game's deck (read from the saved state)
+const deckOf = (engine) => engine.toJSON().game.deck;
 const answer = (engine, connId, a) => engine.playerCommand(connId, { type: 'answer', answer: a });
 const phase = (engine) => engine.hostView().phase;
 
@@ -488,13 +490,14 @@ test('choose options are shuffled once per round; host and players see the same 
   join(engine, 'a1', 'Alice');
   join(engine, 'b1', 'Bob');
   startGame(engine);
+  const deck = deckOf(engine).choose;
   const orders = [];
   for (let i = 0; i < 9; i++) {
     const h = engine.hostView().question.options.map((o) => o.quote);
     assert.deepEqual(engine.playerView('a1').question.options.map((o) => o.quote), h);
     assert.deepEqual(engine.playerView('b1').question.options.map((o) => o.quote), h);
     assert.deepEqual(engine.hostView().question.options.map((o) => o.quote), h); // stable between views
-    assert.deepEqual([...h].sort(), CHOOSE[i].options.map((o) => o.quote).sort());
+    assert.deepEqual([...h].sort(), CHOOSE[deck[i]].options.map((o) => o.quote).sort());
     orders.push(h.map((q) => Number(q.slice(-1)) - 1).join(''));
     okHost(engine, 'endEarly');
     const revealed = engine.hostView().question.options.map((o) => o.quote);
@@ -671,25 +674,26 @@ test('reveal shows correctness, source, note and per-option counts to host and p
   join(engine, 'B', 'B');
   join(engine, 'C', 'C');
   startGame(engine);
-  answer(engine, 'A', true);
-  answer(engine, 'B', false);
+  const item = YESNO[deckOf(engine).yesno[0]];
+  answer(engine, 'A', item.isBible);
+  answer(engine, 'B', !item.isBible);
   okHost(engine, 'endEarly');
   const h = engine.hostView();
   assert.deepEqual(h.question, {
     qid: h.round.qid,
     type: 'yesno',
-    quote: YESNO[0].quote,
-    isBible: YESNO[0].isBible,
-    source: YESNO[0].source,
-    note: YESNO[0].note,
-    correctAnswer: YESNO[0].isBible,
+    quote: item.quote,
+    isBible: item.isBible,
+    source: item.source,
+    note: item.note,
+    correctAnswer: item.isBible,
   });
   assert.deepEqual(h.stats, { bible: 1, notBible: 1, noAnswer: 1 });
   assert.equal(h.results.length, 3);
   const p = engine.playerView('A');
-  assert.equal(p.question.source, YESNO[0].source);
-  assert.deepEqual(p.result, { answer: true, correct: true, points: 1000, ms: 0 });
-  assert.equal(p.myAnswer, true);
+  assert.equal(p.question.source, item.source);
+  assert.deepEqual(p.result, { answer: item.isBible, correct: true, points: 1000, ms: 0 });
+  assert.equal(p.myAnswer, item.isBible);
   okHost(engine, 'next'); // leaderboard: phones keep their round result
   assert.deepEqual(engine.playerView('A').result, p.result);
 });
@@ -753,8 +757,9 @@ test('skip replaces the question with the next spare of the same type and discar
   join(engine, 'B', 'B');
   assert.equal(host(engine, 'skip').code, 'wrong_phase');
   startGame(engine);
+  const deck = deckOf(engine).yesno;
   const q1 = engine.hostView().question;
-  assert.equal(q1.quote, YESNO[0].quote);
+  assert.equal(q1.quote, YESNO[deck[0]].quote);
   assert.equal(engine.hostView().canSkip, true);
   answer(engine, 'A', true);
   clock.t += 5000;
@@ -762,28 +767,31 @@ test('skip replaces the question with the next spare of the same type and discar
   let v = engine.hostView();
   assert.equal(v.phase, 'question');
   assert.equal(v.round.no, 1);
-  assert.equal(v.question.quote, YESNO[6].quote); // first spare
+  assert.equal(v.question.quote, YESNO[deck[6]].quote); // first spare = next deck entry
   assert.notEqual(v.question.qid, q1.qid);
   assert.deepEqual(v.answers, { count: 0, expected: 2 });
   assert.equal(v.deadline, clock.t + 15000); // fresh timer
   assert.equal(engine.playerView('A').myAnswer, null);
   assert.equal(engine.playerCommand('A', { type: 'answer', answer: true, qid: q1.qid }).code, 'stale_question');
   okHost(engine, 'skip');
-  assert.equal(engine.hostView().question.quote, YESNO[7].quote);
+  assert.equal(engine.hostView().question.quote, YESNO[deck[7]].quote);
   assert.equal(engine.hostView().canSkip, false);
   assert.equal(host(engine, 'skip').code, 'no_spare');
   okHost(engine, 'endEarly');
   toNextQuestion(engine);
-  assert.equal(engine.hostView().question.quote, YESNO[1].quote); // round 2 is still the planned item
+  assert.equal(engine.hostView().question.quote, YESNO[deck[1]].quote); // round 2 is still the planned item
 });
 
 test('skip on a choose round uses the choose spare', () => {
   const { engine } = setup({ config: { yesnoRounds: 0 } });
   join(engine, 'A', 'A');
   startGame(engine);
+  const deck = deckOf(engine).choose;
+  assert.equal(engine.hostView().canSkip, true);
   okHost(engine, 'skip');
   const quotes = engine.hostView().question.options.map((o) => o.quote).sort();
-  assert.deepEqual(quotes, CHOOSE[9].options.map((o) => o.quote).sort());
+  assert.deepEqual(quotes, CHOOSE[deck[9]].options.map((o) => o.quote).sort());
+  assert.equal(engine.hostView().canSkip, false);
   assert.equal(host(engine, 'skip').code, 'no_spare');
 });
 
@@ -825,7 +833,7 @@ test('reset: back to the lobby with scores, streaks and history cleared, players
   assert.equal(engine.playerView('A').me.prevRank, null);
   startGame(engine);
   assert.equal(engine.hostView().round.no, 1);
-  assert.equal(engine.hostView().question.quote, YESNO[0].quote);
+  assert.equal(engine.hostView().question.quote, YESNO[deckOf(engine).yesno[0]].quote);
 });
 
 /* ------------------------------------------------------------- save/restore */
@@ -896,4 +904,127 @@ test('config overrides are applied and the saved config wins on restore', () => 
   const r = createEngine({ questions: BANK, now, random: () => 0, config: { yesnoSeconds: 99 }, state: engine.toJSON() });
   assert.equal(r.hostView().totals.yesno, 2);
   assert.equal(r.hostView().timerTotal, 15000);
+});
+
+/* ------------------------------------------------------ random question draw */
+
+const yesnoQuote = (engine) => engine.hostView().question.quote;
+const bankOf = (n, m) => ({
+  translation: 'KJV',
+  yesno: Array.from({ length: n }, (_, i) => ({ ...YESNO[0], quote: `Pool yes/no ${i}`, isBible: i % 2 === 0 })),
+  choose: Array.from({ length: m }, (_, i) => ({ ...CHOOSE[0], options: CHOOSE[0].options.map((o, j) => ({ ...o, quote: `Pool choice ${i} option ${j}` })) })),
+});
+
+test('draw: two games with different seeds play the questions in different orders', () => {
+  const orders = [1, 2, 3].map((seed) => deckOf(setup({ seed }).engine).yesno.slice(0, 6).join(','));
+  assert.ok(new Set(orders).size > 1, orders.join(' | '));
+  const chooseOrders = [1, 2, 3].map((seed) => deckOf(setup({ seed }).engine).choose.join(','));
+  assert.ok(new Set(chooseOrders).size > 1);
+  // every deck is a permutation of the whole pool
+  const d = deckOf(setup({ seed: 5 }).engine);
+  assert.deepEqual([...d.yesno].sort((a, b) => a - b), YESNO.map((_, i) => i));
+  assert.deepEqual([...d.choose].sort((a, b) => a - b), CHOOSE.map((_, i) => i));
+  // the first question shown follows the deck
+  const { engine } = setup({ seed: 3 });
+  join(engine, 'A', 'A');
+  startGame(engine);
+  assert.equal(yesnoQuote(engine), YESNO[deckOf(engine).yesno[0]].quote);
+});
+
+test('draw: no repeat across consecutive games until every item was shown', () => {
+  const N = 12;
+  const { engine } = setup({ questions: bankOf(N, 9), seed: 11 });
+  join(engine, 'A', 'A');
+  const play = () => {
+    startGame(engine);
+    const shown = [];
+    for (let i = 0; i < 6; i++) {
+      shown.push(yesnoQuote(engine));
+      okHost(engine, 'endEarly');
+      toNextQuestion(engine);
+    }
+    okHost(engine, 'reset');
+    return shown;
+  };
+  const g1 = play();
+  const g2 = play();
+  assert.equal(new Set([...g1, ...g2]).size, N); // 2 games x 6 = all 12 exactly once
+  const g3 = play(); // pool used up: starts over, still 6 different questions
+  assert.equal(new Set(g3).size, 6);
+  const g4 = play();
+  assert.equal(new Set([...g3, ...g4]).size, N);
+});
+
+test('draw: skip takes an unshown item and canSkip turns false when the deck is exhausted', () => {
+  const { engine } = setup({ questions: bankOf(8, 9), seed: 4 });
+  join(engine, 'A', 'A');
+  startGame(engine);
+  const shown = new Set([yesnoQuote(engine)]);
+  assert.equal(engine.hostView().canSkip, true);
+  okHost(engine, 'skip');
+  assert.equal(shown.has(yesnoQuote(engine)), false);
+  shown.add(yesnoQuote(engine));
+  assert.equal(engine.hostView().canSkip, true);
+  okHost(engine, 'skip');
+  assert.equal(shown.has(yesnoQuote(engine)), false);
+  assert.equal(engine.hostView().canSkip, false);
+  assert.equal(host(engine, 'skip').code, 'no_spare');
+  // skipped items count as shown: the next game starts with unshown ones
+  assert.equal(engine.toJSON().used.yesno.length, 3);
+});
+
+test('draw: toJSON/fromJSON mid-game restores the same current and upcoming questions', () => {
+  const { engine, now } = setup({ seed: 21 });
+  join(engine, 'A', 'A');
+  startGame(engine);
+  for (let i = 0; i < 3; i++) {
+    okHost(engine, 'endEarly');
+    toNextQuestion(engine);
+  }
+  const saved = JSON.parse(JSON.stringify(engine.toJSON()));
+  const restored = createEngine({ questions: BANK, now, random: seeded(1234), state: saved });
+  assert.deepEqual(restored.toJSON(), engine.toJSON());
+  for (let i = 0; i < 11; i++) {
+    // the drawn item is the same (the shown option order uses fresh randomness)
+    assert.deepEqual(restored.toJSON().game.round.item, engine.toJSON().game.round.item);
+    okHost(engine, 'endEarly');
+    okHost(restored, 'endEarly');
+    if (i < 10) {
+      toNextQuestion(engine);
+      toNextQuestion(restored);
+    }
+  }
+});
+
+test('draw: an old saved state (spare counter, no deck/used) loads and plays from file order', () => {
+  const { engine, now } = setup();
+  join(engine, 'A', 'A');
+  startGame(engine);
+  okHost(engine, 'endEarly');
+  const old = JSON.parse(JSON.stringify(engine.toJSON()));
+  delete old.used;
+  delete old.game.deck;
+  old.game.spare = { yesno: 6, choose: 9 };
+  const restored = createEngine({ questions: BANK, now, random: seeded(8), state: old });
+  assert.equal(restored.hostView().phase, 'reveal');
+  toNextQuestion(restored);
+  assert.equal(restored.hostView().round.no, 2);
+  assert.equal(restored.hostView().question.quote, YESNO[1].quote); // file order
+  assert.equal(restored.hostView().canSkip, true);
+  okHost(restored, 'skip');
+  assert.equal(restored.hostView().question.quote, YESNO[6].quote);
+  for (let i = 3; i <= 6; i++) {
+    okHost(restored, 'endEarly');
+    toNextQuestion(restored);
+    assert.equal(restored.hostView().question.quote, YESNO[i - 1].quote);
+  }
+  okHost(restored, 'endEarly');
+  toNextQuestion(restored); // round 7: first choose item
+  assert.deepEqual(
+    restored.hostView().question.options.map((o) => o.quote).sort(),
+    CHOOSE[0].options.map((o) => o.quote).sort(),
+  );
+  // a reset then draws a random deck again
+  okHost(restored, 'reset');
+  assert.equal(restored.toJSON().game.deck.yesno.length, YESNO.length);
 });

@@ -1,0 +1,81 @@
+RUN: 20261101-1224-harder-lyric-questions
+WORKSTREAM: WS-1: 28 yes/no items
+
+OBJECTIVE
+Write 28 new, much harder yes/no items for the "Bible or Not?" question pool, so the game is genuinely tricky and replayable. Every answer must be provably right.
+
+TASK
+Create /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/content/yesno.json with exactly 28 yes/no items in the fragment format below, and /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/content/sources-yesno.md with one table row per quote (row IDs Y1-Y28). Between 12 and 16 of the 28 must be Bible (isBible true).
+
+CONTEXT (shared by WS-1, WS-2, WS-3)
+The project is "Bible or Not?", a party game shown on a TV with players answering on phones. Repo root: /home/user/biblequiz. Rounds 1-6 are yes/no ("Is this from the Bible?", 15 s); rounds 7-15 are pick-one ("Which one is from the Bible?", four quotes, exactly one is Bible, 25 s). The old bank (questions.json) used famous proverbs and was far too easy. The owner wants it "much much harder": real Bible verses that are easily confused with popular song lyrics or famous quotes, and decoys that are song lyrics or famous quotes that sound like the Bible. Three writers are building a 70-item pool in parallel (WS-1: 28 yes/no, WS-2: 21 choose, WS-3: 21 choose). Each game draws from it at random, so every item must work on its own.
+
+WHAT MAKES AN ITEM HARD (the whole point)
+- Bible options: pick KJV verses that sound like a pop/rock/soul lyric, a film or TV line, a speech, or a famous author's quote. Prefer verses with few or no archaic words ("Two are better than one", "Love is strong as death", "Wine maketh merry: but money answereth all things"). Bible verses that a famous song or speech borrowed word for word are excellent, as long as the shown words are exact KJV (the note then names the song or speech).
+- Decoys: song lyrics, film/TV lines, speeches and famous quotes that sound biblical: solemn, archaic, prophetic, or proverb-like (Leonard Cohen, Bob Marley, Iron Maiden, hymns, Yeats, Lincoln, Gibran, Tolkien, Gladiator...). Avoid lines with modern giveaways (brand names, "baby", "subway", slang, "Jesus" in a non-KJV phrasing).
+- Choose items: the four options share one theme (love, money, the end of the world, freedom, fools...) so the topic gives nothing away. In every choose item at least one decoy should sound archaic/KJV-like, OR the Bible option should contain no archaic word.
+- Songs that paraphrase a verse (wording not exact KJV) are good decoys; the note then gives the real verse reference.
+- Mix: at least 60% of all quotes in your fragment must be either a Bible verse (every Bible verse you pick must sound like a lyric/quote, so all count) or a decoy that is a song lyric, film/TV line, speech or famous quote. At least a third of your decoys must be song lyrics from popular songs (any era, any genre that a party crowd would know).
+
+HARD RULES (from docs/sources.md, plus new ones)
+1. Bible quotes are KJV word for word. You may drop a leading "And", "For" or "But", drop or change end punctuation (end every quote with a full stop if the verse is cut mid-sentence), quote part of a verse, capitalise the first letter of a quote that starts mid-verse. Never change, modernise or reorder words. No ellipsis inside a quote. Keep KJV spelling. The excerpt must not change the verse's meaning (no "Money is the root of all evil" style cuts).
+2. Bible `source` format: `Book Chapter:Verse (KJV)` or `Book Chapter:Verse-Verse (KJV)`, e.g. `Song of Solomon 8:7 (KJV)`, `Psalms 137:1 (KJV)`. Only Bible sources end in "(KJV)".
+3. Use ONLY Bible books (and chapter ranges) assigned to you below. This prevents duplicates between writers.
+4. No modern-translation gotchas: never use a decoy whose point is that it is in the NIV/ESV/etc. but not the KJV (e.g. "Love is patient, love is kind").
+5. A decoy may echo a verse, but its exact wording must not be in the KJV as a whole verse or any part of one; then the note gives the real verse.
+6. Non-Bible `source`: real person/work, song title, album or film, and year. Song: `Artist, "Song" (Year)`. Film: `Film title (Year), spoken by Character`. Misattributed quotes: say who it is usually credited to and that the attribution is doubtful. Never invent an attribution; if you cannot confirm a lyric's exact wording or a quote's origin, do not use it.
+7. Song lyrics: one short line only, at most 20 words. Quote exactly as the song sings it (standard published lyrics; normalise capitalisation; you may add or drop end punctuation).
+8. No scripture of other religions, nothing from the Apocrypha, nothing crude, nothing mocking faith.
+9. Quotes at most 160 characters; notes at most 140 characters. No duplicates. Nothing from the old bank (read /home/user/biblequiz/questions.json to see it).
+10. Notes: plain words, tell players the real source and the trick, e.g. "Not the Bible: Iron Maiden's 'The Number of the Beast' intro (1982), loosely based on Revelation 12:12." or "Bible: Ecclesiastes 10:19. Sounds like a rap line, written about 2,300 years ago." Do not guess dates you cannot check; leave them out instead.
+11. Avoid using any idea reserved for another writer (lists below).
+
+RESERVED IDEAS (each belongs only to the named writer; use yours if they check out, never another writer's)
+WS-1: Psalm 137:1 (Boney M "Rivers of Babylon"); Psalm 19:14; Ecclesiastes 3:2-8 (The Byrds "Turn! Turn! Turn!"); Micah 4:4 (Hamilton); Amos 5:24 (MLK); Isaiah 40:4 (MLK / Handel's Messiah); Exodus 2:22; 2 Samuel 1:19; Psalm 30:5; Ecclesiastes 1:9; Amos 3:3; Ecclesiastes 4:9; Psalm 72:9 "lick the dust". Decoys: Iron Maiden "The Number of the Beast"; Yeats "The Second Coming"; Serenity Prayer (Niebuhr); Gladiator "echoes in eternity"; Leonard Cohen "Hallelujah"; Lincoln Second Inaugural; JFK "Ask not"; "Footprints" poem; Desiderata; Thomas Fuller "darkest before the dawn"; Bob Marley "Redemption Song"; Congreve "Hell hath no fury"; "No rest for the wicked"; Queen "Another One Bites the Dust"; The Beatles "Let It Be"; "Amazing Grace"; Blake "Jerusalem"; John Donne.
+WS-2: Song of Solomon (all of it); Luke 12:48 vs Spider-Man; Proverbs 9:17 "Stolen waters". Decoys: Johnny Nash "I Can See Clearly Now"; Johnny Cash "Ring of Fire"; Pat Benatar "Love Is a Battlefield"; Shakespeare Sonnet 116; Kahlil Gibran "The Prophet"; The Killers "Mr. Brightside"; Coldplay "Viva la Vida" and "Fix You"; Bob Dylan "The Times They Are a-Changin'"; Spider-Man; Madonna "Like a Prayer"; Whitney Houston "Greatest Love of All"; The Beatles "All You Need Is Love"; Tennyson "loved and lost".
+WS-3: Ecclesiastes 10:19 money; Ecclesiastes 9:4 living dog; Ecclesiastes 12:12 books; Proverbs 17:28 fool silent; Proverbs 20:1 wine is a mocker; Proverbs 27:17 iron; John 8:32 truth make you free; John 15:13 greater love. Decoys: ABBA "Money, Money, Money"; The Beatles "Can't Buy Me Love"; Pink Floyd "Money"; "Better to remain silent and be thought a fool"; "An eye for an eye makes the whole world blind" (misattributed to Gandhi); "The only thing necessary for the triumph of evil" (misattributed to Burke); Bob Marley "Three Little Birds"; Julian of Norwich "All shall be well"; Bobby McFerrin; Braveheart; The Shawshank Redemption; Tolkien; Star Wars; The Lion King; Dumbledore / Harry Potter; Kris Kristofferson "Me and Bobby McGee"; Simon & Garfunkel "Bridge over Troubled Water"; Milton "Better to reign in Hell"; Shakespeare "The devil can cite Scripture"; Dickens "best of times"; "Que sera, sera"; Hemingway "The Sun Also Rises".
+
+KJV DATA AND CHECK SCRIPT
+Two KJV texts are in /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/kjv/. To read a verse: python3 -I -c "import json;d=json.load(open('/home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/kjv/aruljohn/Ecclesiastes.json'));print(d['chapters'][9]['verses'][18]['text'])" (chapter and verse indexes are 0-based; file names have no spaces, e.g. SongofSolomon.json, 1Samuel.json). To search the whole KJV for a phrase, grep -ril "phrase" that folder. The checker: python3 -I /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/verify.py <your fragment.json>. It checks every Bible quote is an exact substring of the cited verse in both texts, every decoy is absent from the KJV, duplicates, and the style rule; WARN lines are for your judgement, FAIL lines must be fixed.
+
+FRAGMENT FORMAT (JSON array, UTF-8, 2-space indent)
+yes/no item: {"type":"yesno","quote":"...","isBible":true,"source":"... (KJV)","note":"...","category":"..."}
+choose item: {"type":"choose","options":[{"quote":"...","isBible":false,"source":"...","category":"..."}, x4],"note":"..."}  (exactly one option isBible:true; vary its position 0-3 across items)
+category values: Bible: "bible-lyric" (sounds like a song lyric), "bible-song" (a famous song or musical borrowed it), "bible-quote" (sounds like a famous quote, film line or speech). Decoys: "song", "film-tv", "speech", "famous-quote", "hymn", "poem", "literature", "proverb".
+
+SOURCES FRAGMENT FORMAT (markdown table, same columns as /home/user/biblequiz/docs/sources.md)
+| # | Quote | isBible | Source (as in JSON) | Verification URL(s) | Verification note |
+Every non-Bible row needs at least one URL you actually opened or saw in a search result in this session (Wikipedia, Wikiquote, the artist's official site, Genius, AZLyrics, a primary text). Bible rows use https://www.biblegateway.com/passage/?search=<Book>+<C>%3A<V>&version=KJV and note "Matches KJV word for word (verify.py, two KJV texts)".
+
+WORKING EFFICIENTLY
+You have a limited number of turns. Draft all items first from your knowledge, run verify.py, then confirm decoy wording and origins with WebSearch/WebFetch, sending several searches in the same turn. Replace any item you cannot confirm rather than guessing.
+
+YOUR BIBLE BOOKS (use no others)
+Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Ruth, 1 Samuel, 2 Samuel, Job, Psalms 1-75, Ecclesiastes 1-4, Isaiah, Amos, Micah, Matthew, Mark, Hebrews, 1 Peter
+
+INPUTS
+- /home/user/biblequiz/questions.json (old bank: do not reuse any quote)
+- /home/user/biblequiz/docs/sources.md (rules and row format)
+- /home/user/biblequiz/test/questions.test.js (mechanical rules)
+
+SCOPE
+Writable: /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/content/yesno.json, /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/content/sources-yesno.md, and scratch files under /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/content/scratch-WS-1/
+Read-only: everything else
+Permitted special actions: WebSearch and WebFetch for verification; running python3 -I verify.py. Nothing else.
+
+OUTPUT
+The two files above. In the report, also list each item in one line: quote | isBible | source | category.
+
+ACCEPTANCE CRITERIA
+1. python3 -I /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/verify.py /home/user/biblequiz/.orchestrator/runs/20261101-1224-harder-lyric-questions/content/yesno.json prints RESULT PASS.
+2. Exactly 28 yes/no items; schema as in the fragment format; quotes <= 160 chars; notes <= 140 chars.
+3. Only Bible verses from your assigned books; no quote from the old bank; no idea reserved for another writer.
+4. At least 60% of quotes are Bible verses or song/film-tv/speech/famous-quote decoys, and at least a third of decoys are song lyrics (verify.py STATS shows categories).
+5. Between 12 and 16 items are Bible; each Bible quote would plausibly be taken for a lyric or quote, and each decoy plausibly taken for scripture.
+6. Every non-Bible quote's wording and origin was confirmed against an outside source in this session, with the URL in the sources fragment.
+
+VERIFICATION
+Run verify.py on your fragment and paste the RESULT and STATS lines. Count categories and report the percentages.
+
+STOP CONDITIONS
+Stop and report BLOCKED if: verify.py or the KJV data is missing or broken; you cannot reach the web at all for verification.

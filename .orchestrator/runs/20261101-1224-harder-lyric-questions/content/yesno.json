@@ -1,0 +1,226 @@
+[
+  {
+    "type": "yesno",
+    "quote": "By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion.",
+    "isBible": true,
+    "source": "Psalms 137:1 (KJV)",
+    "note": "Bible: Psalm 137:1. Boney M's disco hit \"Rivers of Babylon\" (1978) took its words from this psalm.",
+    "category": "bible-song"
+  },
+  {
+    "type": "yesno",
+    "quote": "She's buying a stairway to heaven.",
+    "isBible": false,
+    "source": "Led Zeppelin, \"Stairway to Heaven\" (1971)",
+    "note": "Not the Bible: Led Zeppelin's \"Stairway to Heaven\" (1971). Jacob dreamed of a ladder to heaven in Genesis 28:12.",
+    "category": "song"
+  },
+  {
+    "type": "yesno",
+    "quote": "A time to love, and a time to hate; a time of war, and a time of peace.",
+    "isBible": true,
+    "source": "Ecclesiastes 3:8 (KJV)",
+    "note": "Bible: Ecclesiastes 3:8. The Byrds sang it in \"Turn! Turn! Turn!\", Pete Seeger's song built from Ecclesiastes 3.",
+    "category": "bible-song"
+  },
+  {
+    "type": "yesno",
+    "quote": "And what rough beast, its hour come round at last, slouches towards Bethlehem to be born?",
+    "isBible": false,
+    "source": "W. B. Yeats, \"The Second Coming\" (1920)",
+    "note": "Not the Bible: the last lines of W. B. Yeats's poem \"The Second Coming\" (1920).",
+    "category": "poem"
+  },
+  {
+    "type": "yesno",
+    "quote": "They shall sit every man under his vine and under his fig tree; and none shall make them afraid.",
+    "isBible": true,
+    "source": "Micah 4:4 (KJV)",
+    "note": "Bible: Micah 4:4. George Washington loved this verse, and Hamilton's \"One Last Time\" quotes it.",
+    "category": "bible-song"
+  },
+  {
+    "type": "yesno",
+    "quote": "God, grant me the serenity to accept the things I cannot change.",
+    "isBible": false,
+    "source": "Serenity Prayer, usually credited to Reinhold Niebuhr (c. 1932); popular wording, authorship has been questioned",
+    "note": "Not the Bible: the Serenity Prayer, usually credited to theologian Reinhold Niebuhr, from the 1930s.",
+    "category": "famous-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "Let judgment run down as waters, and righteousness as a mighty stream.",
+    "isBible": true,
+    "source": "Amos 5:24 (KJV)",
+    "note": "Bible: Amos 5:24. Martin Luther King Jr. echoed it: \"until justice rolls down like waters\".",
+    "category": "bible-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "What we do in life echoes in eternity.",
+    "isBible": false,
+    "source": "Gladiator (2000), spoken by Maximus",
+    "note": "Not the Bible: Maximus (Russell Crowe) in Gladiator (2000).",
+    "category": "film-tv"
+  },
+  {
+    "type": "yesno",
+    "quote": "Every valley shall be exalted, and every mountain and hill shall be made low.",
+    "isBible": true,
+    "source": "Isaiah 40:4 (KJV)",
+    "note": "Bible: Isaiah 40:4. Sung in Handel's Messiah and quoted in MLK's \"I Have a Dream\" speech.",
+    "category": "bible-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "It's a cold and it's a broken Hallelujah.",
+    "isBible": false,
+    "source": "Leonard Cohen, \"Hallelujah\" (1984)",
+    "note": "Not the Bible: Leonard Cohen's \"Hallelujah\" (1984). The song name-checks David and Samson.",
+    "category": "song"
+  },
+  {
+    "type": "yesno",
+    "quote": "I have been a stranger in a strange land.",
+    "isBible": true,
+    "source": "Exodus 2:22 (KJV)",
+    "note": "Bible: Exodus 2:22, Moses naming his son. Heinlein's novel title \"Stranger in a Strange Land\" comes from it.",
+    "category": "bible-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "With malice toward none; with charity for all.",
+    "isBible": false,
+    "source": "Abraham Lincoln, Second Inaugural Address (1865)",
+    "note": "Not the Bible: Abraham Lincoln's Second Inaugural Address (1865), a speech full of Bible quotes.",
+    "category": "speech"
+  },
+  {
+    "type": "yesno",
+    "quote": "How are the mighty fallen!",
+    "isBible": true,
+    "source": "2 Samuel 1:19 (KJV)",
+    "note": "Bible: 2 Samuel 1:19, David's lament for Saul and Jonathan. Sounds like a headline or a movie line.",
+    "category": "bible-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "Morning has broken like the first morning.",
+    "isBible": false,
+    "source": "Cat Stevens, \"Morning Has Broken\" (1971); words by Eleanor Farjeon (1931)",
+    "note": "Not the Bible: Eleanor Farjeon's 1931 hymn, made a pop hit by Cat Stevens (1971). It echoes Genesis 1.",
+    "category": "song"
+  },
+  {
+    "type": "yesno",
+    "quote": "Weeping may endure for a night, but joy cometh in the morning.",
+    "isBible": true,
+    "source": "Psalms 30:5 (KJV)",
+    "note": "Bible: Psalm 30:5. Sounds like a soul or gospel lyric, but it is a psalm of David.",
+    "category": "bible-lyric"
+  },
+  {
+    "type": "yesno",
+    "quote": "Go placidly amid the noise and haste, and remember what peace there may be in silence.",
+    "isBible": false,
+    "source": "Max Ehrmann, \"Desiderata\" (1927)",
+    "note": "Not the Bible: Max Ehrmann's prose poem \"Desiderata\" (1927), long wrongly said to be found in an old church.",
+    "category": "poem"
+  },
+  {
+    "type": "yesno",
+    "quote": "There is no new thing under the sun.",
+    "isBible": true,
+    "source": "Ecclesiastes 1:9 (KJV)",
+    "note": "Bible: Ecclesiastes 1:9. Usually quoted as \"nothing new under the sun\".",
+    "category": "bible-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "It is always darkest just before the day dawneth.",
+    "isBible": false,
+    "source": "Thomas Fuller, A Pisgah-Sight of Palestine (1650)",
+    "note": "Not the Bible: English preacher Thomas Fuller, 1650. The \"-eth\" is his, not King James's.",
+    "category": "famous-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "Can two walk together, except they be agreed?",
+    "isBible": true,
+    "source": "Amos 3:3 (KJV)",
+    "note": "Bible: Amos 3:3. Sounds like a love-song lyric, but it is a prophet's question.",
+    "category": "bible-lyric"
+  },
+  {
+    "type": "yesno",
+    "quote": "Heaven has no rage like love to hatred turned, nor hell a fury like a woman scorned.",
+    "isBible": false,
+    "source": "William Congreve, The Mourning Bride (1697)",
+    "note": "Not the Bible: William Congreve's play The Mourning Bride (1697), source of \"Hell hath no fury\".",
+    "category": "literature"
+  },
+  {
+    "type": "yesno",
+    "quote": "Two are better than one; because they have a good reward for their labour.",
+    "isBible": true,
+    "source": "Ecclesiastes 4:9 (KJV)",
+    "note": "Bible: Ecclesiastes 4:9. Boys Like Girls and Taylor Swift had a 2009 hit called \"Two Is Better Than One\".",
+    "category": "bible-lyric"
+  },
+  {
+    "type": "yesno",
+    "quote": "There is no rest for the wicked.",
+    "isBible": false,
+    "source": "Proverb based on Isaiah 57:21",
+    "note": "Not the Bible as worded. Isaiah 57:21 says \"There is no peace, saith my God, to the wicked.\"",
+    "category": "proverb"
+  },
+  {
+    "type": "yesno",
+    "quote": "Let us eat and drink; for to morrow we shall die.",
+    "isBible": true,
+    "source": "Isaiah 22:13 (KJV)",
+    "note": "Bible: Isaiah 22:13. Sounds like a party anthem; the prophet was condemning that attitude.",
+    "category": "bible-lyric"
+  },
+  {
+    "type": "yesno",
+    "quote": "There will be an answer, let it be.",
+    "isBible": false,
+    "source": "The Beatles, \"Let It Be\" (1970)",
+    "note": "Not the Bible: The Beatles' \"Let It Be\" (1970). McCartney wrote it after dreaming of his late mother, Mary.",
+    "category": "song"
+  },
+  {
+    "type": "yesno",
+    "quote": "What hath God wrought!",
+    "isBible": true,
+    "source": "Numbers 23:23 (KJV)",
+    "note": "Bible: Numbers 23:23. Samuel Morse sent it as the first long-distance telegraph message (1844).",
+    "category": "bible-quote"
+  },
+  {
+    "type": "yesno",
+    "quote": "I once was lost, but now am found, was blind, but now I see.",
+    "isBible": false,
+    "source": "John Newton, hymn \"Amazing Grace\" (1779)",
+    "note": "Not the Bible: John Newton's hymn \"Amazing Grace\". It echoes John 9:25: \"whereas I was blind, now I see\".",
+    "category": "hymn"
+  },
+  {
+    "type": "yesno",
+    "quote": "His enemies shall lick the dust.",
+    "isBible": true,
+    "source": "Psalms 72:9 (KJV)",
+    "note": "Bible: Psalm 72:9. Sounds like a heavy metal lyric, written about 3,000 years ago.",
+    "category": "bible-lyric"
+  },
+  {
+    "type": "yesno",
+    "quote": "All we are is dust in the wind.",
+    "isBible": false,
+    "source": "Kansas, \"Dust in the Wind\" (1977)",
+    "note": "Not the Bible: Kansas, \"Dust in the Wind\" (1977). It sounds like Ecclesiastes, but it is a rock ballad.",
+    "category": "song"
+  }
+]

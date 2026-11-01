@@ -64,6 +64,11 @@ const engine = createEngine({
 | `toJSON()` | plain object | A deep copy of the whole state; survives `JSON.parse(JSON.stringify(x))`. |
 | `fromJSON(obj)` | nothing | Replaces the whole state. Throws on an object that is not a saved state. Same as passing `state` to `createEngine`. |
 
+Saved state for the draw: `used` = `{ yesno: [...], choose: [...] }` (item indices shown in earlier
+games of the room, kept across `reset`), and in the game `deck` = `{ yesno: [...], choose: [...] }`
+(play order) with `spare` = next deck position per type. A state saved by an older version (no
+`deck`/`used`) loads and plays that game in file order. `schema` stays 1.
+
 Restoring: always pass the same `questions` object. The saved state carries its own config
 (the config passed to `createEngine` is ignored when `state` is given) and a copy of the
 current question, so a reveal after restore is exact. Connection ids are saved too. If the
@@ -87,9 +92,12 @@ Exports besides `createEngine`: `DEFAULT_CONFIG`, `PHASES`, `ERROR_CODES`,
 | `maxNameLength` | 15 | Name length in Unicode code points |
 | `leaderboardSize` | 5 | Entries on the host leaderboard slide |
 
-The game uses the first `yesnoRounds` items of `yesno` and the first `chooseRounds` items of
-`choose`; the remaining items are spares for "Skip question". If a list is shorter, the game
-has fewer rounds of that type. Malformed items (no quote, no boolean `isBible`, a choose item
+Each game draws `yesnoRounds` items of `yesno` and `chooseRounds` items of `choose` at random
+(file order does not matter). At game creation (start and every `reset`) the engine builds a
+deck per type: a shuffled list of all item indices, items not yet shown in earlier games of
+the room first, then already shown ones; when all items of a type were shown, that type starts
+over. The rounds use the deck in order and "Skip question" takes the next deck entry. If a
+list is shorter, the game has fewer rounds of that type. Malformed items (no quote, no boolean `isBible`, a choose item
 without exactly 4 options and exactly one `isBible: true`) are ignored.
 
 ## 3. WebSocket endpoints
@@ -142,7 +150,7 @@ with `bad_message`.
 | `next` | none | `intro`, `reveal`, `leaderboard`, `section` | Advance (see [flow](#5-phases-and-game-flow)). Elsewhere `wrong_phase`. |
 | `endEarly` | none | `question` | End the question now and reveal. |
 | `addTime` | none | `question` | Deadline and total time grow by `extraSeconds` (15 s). Any number of times. Reply also has `deadline`. |
-| `skip` | none | `question` | Discard all answers of this round and replace the question with the next unused spare of the **same type**, with a fresh timer and a new `qid`. Same round number. `no_spare` when none is left. |
+| `skip` | none | `question` | Discard all answers of this round and replace the question with the next unused deck entry of the **same type**, with a fresh timer and a new `qid`. Same round number. `no_spare` when none is left. |
 | `kick` | `playerId: string` | Any phase | Remove the player. Their socket gets a `kicked` notice and their token stops working. Reply also has `kickedConnId` (or `null` if offline). |
 | `reset` | none | Any phase | Back to `lobby`. Scores, streaks, history cleared, players kept, question pointers reset. |
 
@@ -238,7 +246,7 @@ All of that appears from `reveal` on. (The engine tests check this for every rou
 | `intro` | `intro` | `{ yesnoRounds, chooseRounds, yesnoSeconds, chooseSeconds, doubleFromRound }` (`doubleFromRound` is `null` when the game is too short to reach it) |
 | `question` | `question` | yes/no: `{ qid, type: "yesno", quote }`; choose: `{ qid, type: "choose", options: [{ quote }] x4 }` in the shown order |
 | `answers` | `question` | `{ count, expected }`: answered so far, and players connected or already answered |
-| `canSkip` | `question` | `true` if a spare of this type is left |
+| `canSkip` | `question` | `true` if an unused deck entry of this type is left |
 | `extraSeconds` | `question` | seconds added by `addTime` (for the button label) |
 | `question` | `reveal` | yes/no: `{ qid, type, quote, isBible, source, note, correctAnswer }` (`correctAnswer` = `isBible`); choose: `{ qid, type, options: [{ quote, isBible, source }] x4, note, correctAnswer }` (`correctAnswer` = shown index). `source` and `note` may be `null`. |
 | `stats` | `reveal` | yes/no: `{ bible, notBible, noAnswer }`; choose: `{ options: [n0, n1, n2, n3], noAnswer }` |

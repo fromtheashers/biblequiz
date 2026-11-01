@@ -11,6 +11,10 @@
  *   (a "section" slide comes before the first four-choice round)
  *   ... -> leaderboard (after the final round) -> podium
  *
+ * Questions: every game draws its own random deck per type (game.deck, item indices in
+ * play order). S.used remembers the items shown in earlier games of the room, so a new
+ * deck lists unused items first; skips take the next deck position (game.spare).
+ *
  * See docs/protocol.md for the message protocol and the view shapes.
  */
 
@@ -219,19 +223,33 @@ export function createEngine({ questions, config = {}, now, random, state } = {}
     return { yesno, choose, rounds: yesno + choose };
   };
 
+  // Ordered list of every item index of a type: items not yet shown in this room first
+  // (shuffled), then the already shown ones (shuffled). When all were shown, start over.
+  function buildDeck(type) {
+    const n = bank[type].length;
+    let used = S.used[type].filter((i) => Number.isInteger(i) && i >= 0 && i < n);
+    if (used.length >= n) used = [];
+    S.used[type] = used;
+    const seen = new Set(used);
+    const fresh = [];
+    for (let i = 0; i < n; i++) if (!seen.has(i)) fresh.push(i);
+    return [...shuffle(fresh), ...shuffle(used)];
+  }
+
   function freshGame() {
     const t = totals();
     return {
       phase: 'lobby',
       roundNo: 0,
-      spare: { yesno: t.yesno, choose: t.choose }, // next unused spare index per type
+      deck: { yesno: buildDeck('yesno'), choose: buildDeck('choose') }, // item indices in play order
+      spare: { yesno: t.yesno, choose: t.choose }, // next unused deck position per type (for skips)
       round: null,
       history: [],
     };
   }
 
   function freshState(conf) {
-    return { schema: SCHEMA, version: 0, config: conf, seq: 0, qidSeq: 0, players: [], game: null };
+    return { schema: SCHEMA, version: 0, config: conf, seq: 0, qidSeq: 0, players: [], used: { yesno: [], choose: [] }, game: null };
   }
 
   const bump = () => {
@@ -329,6 +347,7 @@ export function createEngine({ questions, config = {}, now, random, state } = {}
 
   function startQuestion(no, type, itemIndex) {
     const item = bank[type][itemIndex];
+    if (!S.used[type].includes(itemIndex)) S.used[type].push(itemIndex);
     const total = Math.round((type === 'yesno' ? cfg().yesnoSeconds : cfg().chooseSeconds) * 1000);
     const startedAt = now();
     S.qidSeq += 1;
@@ -353,7 +372,8 @@ export function createEngine({ questions, config = {}, now, random, state } = {}
 
   function startRound(no) {
     const type = typeOfRound(no);
-    const itemIndex = type === 'yesno' ? no - 1 : no - 1 - totals().yesno;
+    const pos = type === 'yesno' ? no - 1 : no - 1 - totals().yesno;
+    const itemIndex = S.game.deck[type][pos];
     startQuestion(no, type, itemIndex);
   }
 
@@ -492,10 +512,10 @@ export function createEngine({ questions, config = {}, now, random, state } = {}
     const g = S.game;
     if (g.phase !== 'question') return fail('wrong_phase');
     const r = g.round;
-    const idx = g.spare[r.type];
-    if (idx >= bank[r.type].length) return fail('no_spare');
-    g.spare[r.type] = idx + 1;
-    startQuestion(r.no, r.type, idx); // same round number, answers discarded
+    const pos = g.spare[r.type];
+    if (pos >= g.deck[r.type].length) return fail('no_spare');
+    g.spare[r.type] = pos + 1;
+    startQuestion(r.no, r.type, g.deck[r.type][pos]); // same round number, answers discarded
     bump();
     return { ok: true };
   }
@@ -711,7 +731,7 @@ export function createEngine({ questions, config = {}, now, random, state } = {}
       case 'question':
         v.question = publicQuestion(r);
         v.answers = answeredCount(r);
-        v.canSkip = g.spare[r.type] < bank[r.type].length;
+        v.canSkip = g.spare[r.type] < g.deck[r.type].length;
         v.extraSeconds = cfg().extraSeconds;
         break;
       case 'reveal':
@@ -868,6 +888,22 @@ export function createEngine({ questions, config = {}, now, random, state } = {}
     if (!PHASES.includes(obj.game.phase)) throw new Error('fromJSON: unknown phase');
     S = deepCopy(obj);
     S.config = normalizeConfig(S.config);
+    // Older saves have no used lists / deck: keep the game in file order (identity deck).
+    const usedOk = isPlainObject(S.used) && Array.isArray(S.used.yesno) && Array.isArray(S.used.choose);
+    if (!usedOk) S.used = { yesno: [], choose: [] };
+    const g = S.game;
+    const deckOk =
+      isPlainObject(g.deck) && Array.isArray(g.deck.yesno) && Array.isArray(g.deck.choose);
+    if (!deckOk) {
+      g.deck = {
+        yesno: bank.yesno.map((_, i) => i),
+        choose: bank.choose.map((_, i) => i),
+      };
+    }
+    if (!isPlainObject(g.spare)) {
+      const t = totals();
+      g.spare = { yesno: t.yesno, choose: t.choose };
+    }
     notices = [];
   }
 

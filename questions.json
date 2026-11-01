@@ -1,159 +1,287 @@
 {
   "translation": "KJV",
   "yesno": [
-    { "type": "yesno", "quote": "Pride goeth before destruction, and an haughty spirit before a fall.", "isBible": true, "source": "Proverbs 16:18 (KJV)", "note": "Often shortened to \"Pride comes before a fall.\"" },
-    { "type": "yesno", "quote": "God helps those who help themselves.", "isBible": false, "source": "Algernon Sidney, Discourses Concerning Government (1698); popularised by Benjamin Franklin, Poor Richard's Almanack (1736)", "note": "Polls find many people think this is in the Bible. It is not." },
-    { "type": "yesno", "quote": "The wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.", "isBible": true, "source": "Romans 6:23 (KJV)", "note": "Paul, writing to the church in Rome." },
-    { "type": "yesno", "quote": "Cleanliness is next to godliness.", "isBible": false, "source": "Old proverb, made famous by John Wesley, sermon \"On Dress\" (c. 1791)", "note": "Sounds biblical, but it's not in the Bible. John Wesley quoted it as a saying in a sermon." },
-    { "type": "yesno", "quote": "This too shall pass.", "isBible": false, "source": "Fable from medieval Persian Sufi poets; retold by Edward FitzGerald (1852) and Abraham Lincoln (1859)", "note": "Not in the Bible. It comes from a Persian fable about a king's ring, later tied to Solomon in folklore." },
-    { "type": "yesno", "quote": "I am escaped with the skin of my teeth.", "isBible": true, "source": "Job 19:20 (KJV)", "note": "Job is where the phrase \"by the skin of my teeth\" comes from." },
-    { "type": "yesno", "quote": "Love the sinner, hate the sin.", "isBible": false, "source": "Saying based on St Augustine, Letter 211 (c. 424): \"with love for mankind and hatred of sins\"", "note": "Not a Bible verse. The idea goes back to St Augustine, writing around AD 424." },
-    { "type": "yesno", "quote": "A soft answer turneth away wrath: but grievous words stir up anger.", "isBible": true, "source": "Proverbs 15:1 (KJV)" },
-    { "type": "yesno", "quote": "The Lord works in mysterious ways.", "isBible": false, "source": "Popular paraphrase of William Cowper, hymn \"Light Shining out of Darkness\", Olney Hymns (1779)", "note": "Not in the Bible. It echoes Cowper's hymn line \"God moves in a mysterious way.\"" },
-    { "type": "yesno", "quote": "Can a man take fire in his bosom, and his clothes not be burned?", "isBible": true, "source": "Proverbs 6:27 (KJV)", "note": "A warning in Proverbs that some choices always bring consequences." },
-    { "type": "yesno", "quote": "Spare the rod and spoil the child.", "isBible": false, "source": "Samuel Butler, Hudibras (1663)", "note": "Not in the Bible as worded. Proverbs 13:24 says \"He that spareth his rod hateth his son.\"" },
-    { "type": "yesno", "quote": "Is there no balm in Gilead; is there no physician there?", "isBible": true, "source": "Jeremiah 8:22 (KJV)", "note": "The prophet Jeremiah, grieving over his people." }
+    {"type": "yesno", "quote": "By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion.", "isBible": true, "source": "Psalms 137:1 (KJV)", "note": "Bible: Psalm 137:1. Boney M's disco hit \"Rivers of Babylon\" (1978) took its words from this psalm."},
+    {"type": "yesno", "quote": "She's buying a stairway to heaven.", "isBible": false, "source": "Led Zeppelin, \"Stairway to Heaven\" (1971)", "note": "Not the Bible: Led Zeppelin's \"Stairway to Heaven\" (1971). Jacob dreamed of a ladder to heaven in Genesis 28:12."},
+    {"type": "yesno", "quote": "A time to love, and a time to hate; a time of war, and a time of peace.", "isBible": true, "source": "Ecclesiastes 3:8 (KJV)", "note": "Bible: Ecclesiastes 3:8. The Byrds sang it in \"Turn! Turn! Turn!\", Pete Seeger's song built from Ecclesiastes 3."},
+    {"type": "yesno", "quote": "And what rough beast, its hour come round at last, slouches towards Bethlehem to be born?", "isBible": false, "source": "W. B. Yeats, \"The Second Coming\" (1920)", "note": "Not the Bible: the last lines of W. B. Yeats's poem \"The Second Coming\" (1920)."},
+    {"type": "yesno", "quote": "They shall sit every man under his vine and under his fig tree; and none shall make them afraid.", "isBible": true, "source": "Micah 4:4 (KJV)", "note": "Bible: Micah 4:4. George Washington loved this verse, and Hamilton's \"One Last Time\" quotes it."},
+    {"type": "yesno", "quote": "God, grant me the serenity to accept the things I cannot change.", "isBible": false, "source": "Serenity Prayer, usually credited to Reinhold Niebuhr (c. 1932); popular wording, authorship has been questioned", "note": "Not the Bible: the Serenity Prayer, usually credited to theologian Reinhold Niebuhr, from the 1930s."},
+    {"type": "yesno", "quote": "Let judgment run down as waters, and righteousness as a mighty stream.", "isBible": true, "source": "Amos 5:24 (KJV)", "note": "Bible: Amos 5:24. Martin Luther King Jr. echoed it: \"until justice rolls down like waters\"."},
+    {"type": "yesno", "quote": "What we do in life echoes in eternity.", "isBible": false, "source": "Gladiator (2000), spoken by Maximus", "note": "Not the Bible: Maximus (Russell Crowe) in Gladiator (2000)."},
+    {"type": "yesno", "quote": "Every valley shall be exalted, and every mountain and hill shall be made low.", "isBible": true, "source": "Isaiah 40:4 (KJV)", "note": "Bible: Isaiah 40:4. Sung in Handel's Messiah and quoted in MLK's \"I Have a Dream\" speech."},
+    {"type": "yesno", "quote": "It's a cold and it's a broken Hallelujah.", "isBible": false, "source": "Leonard Cohen, \"Hallelujah\" (1984)", "note": "Not the Bible: Leonard Cohen's \"Hallelujah\" (1984). The song name-checks David and Samson."},
+    {"type": "yesno", "quote": "I have been a stranger in a strange land.", "isBible": true, "source": "Exodus 2:22 (KJV)", "note": "Bible: Exodus 2:22, Moses naming his son. Heinlein's novel title \"Stranger in a Strange Land\" comes from it."},
+    {"type": "yesno", "quote": "With malice toward none; with charity for all.", "isBible": false, "source": "Abraham Lincoln, Second Inaugural Address (1865)", "note": "Not the Bible: Abraham Lincoln's Second Inaugural Address (1865), a speech full of Bible quotes."},
+    {"type": "yesno", "quote": "How are the mighty fallen!", "isBible": true, "source": "2 Samuel 1:19 (KJV)", "note": "Bible: 2 Samuel 1:19, David's lament for Saul and Jonathan. Sounds like a headline or a movie line."},
+    {"type": "yesno", "quote": "Morning has broken like the first morning.", "isBible": false, "source": "Cat Stevens, \"Morning Has Broken\" (1971); words by Eleanor Farjeon (1931)", "note": "Not the Bible: Eleanor Farjeon's 1931 hymn, made a pop hit by Cat Stevens (1971). It echoes Genesis 1."},
+    {"type": "yesno", "quote": "Weeping may endure for a night, but joy cometh in the morning.", "isBible": true, "source": "Psalms 30:5 (KJV)", "note": "Bible: Psalm 30:5. Sounds like a soul or gospel lyric, but it is a psalm of David."},
+    {"type": "yesno", "quote": "Go placidly amid the noise and haste, and remember what peace there may be in silence.", "isBible": false, "source": "Max Ehrmann, \"Desiderata\" (1927)", "note": "Not the Bible: Max Ehrmann's prose poem \"Desiderata\" (1927), long wrongly said to be found in an old church."},
+    {"type": "yesno", "quote": "There is no new thing under the sun.", "isBible": true, "source": "Ecclesiastes 1:9 (KJV)", "note": "Bible: Ecclesiastes 1:9. Usually quoted as \"nothing new under the sun\"."},
+    {"type": "yesno", "quote": "It is always darkest just before the day dawneth.", "isBible": false, "source": "Thomas Fuller, A Pisgah-Sight of Palestine (1650)", "note": "Not the Bible: English preacher Thomas Fuller, 1650. The \"-eth\" is his, not King James's."},
+    {"type": "yesno", "quote": "Can two walk together, except they be agreed?", "isBible": true, "source": "Amos 3:3 (KJV)", "note": "Bible: Amos 3:3. Sounds like a love-song lyric, but it is a prophet's question."},
+    {"type": "yesno", "quote": "Heaven has no rage like love to hatred turned, nor hell a fury like a woman scorned.", "isBible": false, "source": "William Congreve, The Mourning Bride (1697)", "note": "Not the Bible: William Congreve's play The Mourning Bride (1697), source of \"Hell hath no fury\"."},
+    {"type": "yesno", "quote": "Two are better than one; because they have a good reward for their labour.", "isBible": true, "source": "Ecclesiastes 4:9 (KJV)", "note": "Bible: Ecclesiastes 4:9. Boys Like Girls and Taylor Swift had a 2009 hit called \"Two Is Better Than One\"."},
+    {"type": "yesno", "quote": "There is no rest for the wicked.", "isBible": false, "source": "Proverb based on Isaiah 57:21", "note": "Not the Bible as worded. Isaiah 57:21 says \"There is no peace, saith my God, to the wicked.\""},
+    {"type": "yesno", "quote": "Let us eat and drink; for to morrow we shall die.", "isBible": true, "source": "Isaiah 22:13 (KJV)", "note": "Bible: Isaiah 22:13. Sounds like a party anthem; the prophet was condemning that attitude."},
+    {"type": "yesno", "quote": "There will be an answer, let it be.", "isBible": false, "source": "The Beatles, \"Let It Be\" (1970)", "note": "Not the Bible: The Beatles' \"Let It Be\" (1970). McCartney wrote it after dreaming of his late mother, Mary."},
+    {"type": "yesno", "quote": "What hath God wrought!", "isBible": true, "source": "Numbers 23:23 (KJV)", "note": "Bible: Numbers 23:23. Samuel Morse sent it as the first long-distance telegraph message (1844)."},
+    {"type": "yesno", "quote": "I once was lost, but now am found, was blind, but now I see.", "isBible": false, "source": "John Newton, hymn \"Amazing Grace\" (1779)", "note": "Not the Bible: John Newton's hymn \"Amazing Grace\". It echoes John 9:25: \"whereas I was blind, now I see\"."},
+    {"type": "yesno", "quote": "His enemies shall lick the dust.", "isBible": true, "source": "Psalms 72:9 (KJV)", "note": "Bible: Psalm 72:9. Sounds like a heavy metal lyric, written about 3,000 years ago."},
+    {"type": "yesno", "quote": "All we are is dust in the wind.", "isBible": false, "source": "Kansas, \"Dust in the Wind\" (1977)", "note": "Not the Bible: Kansas, \"Dust in the Wind\" (1977). It sounds like Ecclesiastes, but it is a rock ballad."}
   ],
   "choose": [
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "This above all: to thine own self be true.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 1 Scene 3 (c. 1600)" },
-        { "quote": "Thou shalt love thy neighbour as thyself.", "isBible": true, "source": "Matthew 22:39 (KJV)" },
-        { "quote": "Neither a borrower nor a lender be.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 1 Scene 3 (c. 1600)" },
-        { "quote": "Brevity is the soul of wit.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 2 Scene 2 (c. 1600)" }
-      ],
-      "note": "Jesus called this the second great commandment. All three decoys are Polonius in Hamlet."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "Be sure your sin will find you out.", "isBible": true, "source": "Numbers 32:23 (KJV)" },
-        { "quote": "Honesty is the best policy.", "isBible": false, "source": "English proverb, first recorded in Sir Edwin Sandys, Europae Speculum (1599)" },
-        { "quote": "Charity begins at home.", "isBible": false, "source": "English proverb; modern form first printed in Sir Thomas Browne, Religio Medici (1642)" },
-        { "quote": "Early to bed and early to rise, makes a man healthy, wealthy and wise.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack, collected in The Way to Wealth (1758)" }
-      ],
-      "note": "Moses' warning in Numbers 32:23. \"Charity begins at home\" is a proverb, not a verse."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "An apple a day keeps the doctor away.", "isBible": false, "source": "Welsh proverb, recorded in Pembrokeshire (1866); modern wording from the 1880s" },
-        { "quote": "God heals, and the doctor takes the fees.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack (1736)" },
-        { "quote": "Physician, heal thyself.", "isBible": true, "source": "Luke 4:23 (KJV)" },
-        { "quote": "There's more old drunkards than old doctors.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack (1736)" }
-      ],
-      "note": "Jesus quotes this proverb in Luke 4:23. The other two doctor jokes are Ben Franklin's."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "There is a tide in the affairs of men, which, taken at the flood, leads on to fortune.", "isBible": false, "source": "William Shakespeare, Julius Caesar, Act 4 Scene 3 (1599)" },
-        { "quote": "All the world's a stage, and all the men and women merely players.", "isBible": false, "source": "William Shakespeare, As You Like It, Act 2 Scene 7 (c. 1599)" },
-        { "quote": "The quality of mercy is not strain'd; it droppeth as the gentle rain from heaven.", "isBible": false, "source": "William Shakespeare, The Merchant of Venice, Act 4 Scene 1 (c. 1597)" },
-        { "quote": "To every thing there is a season, and a time to every purpose under the heaven.", "isBible": true, "source": "Ecclesiastes 3:1 (KJV)" }
-      ],
-      "note": "Ecclesiastes 3:1, just before \"A time to be born, and a time to die.\" The rest are Shakespeare."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "Moderation in all things.", "isBible": false, "source": "Proverb echoing the ancient Greek maxim \"Nothing in excess\" (Delphi); exact wording of later origin" },
-        { "quote": "Whatsoever a man soweth, that shall he also reap.", "isBible": true, "source": "Galatians 6:7 (KJV)" },
-        { "quote": "Fortune favours the bold.", "isBible": false, "source": "Latin proverb, found in Terence, Phormio (151 BC)" },
-        { "quote": "Every cloud has a silver lining.", "isBible": false, "source": "Proverb based on John Milton, Comus (1634)" }
-      ],
-      "note": "Galatians 6:7 is where \"you reap what you sow\" comes from."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "To err is human, to forgive divine.", "isBible": false, "source": "Alexander Pope, An Essay on Criticism (1711)" },
-        { "quote": "A little learning is a dang'rous thing.", "isBible": false, "source": "Alexander Pope, An Essay on Criticism (1711)" },
-        { "quote": "Well done is better than well said.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack" },
-        { "quote": "Man shall not live by bread alone.", "isBible": true, "source": "Matthew 4:4 (KJV)" }
-      ],
-      "note": "Jesus answering the tempter in Matthew 4:4, quoting Deuteronomy 8:3."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "He that is down, needs fear no fall; he that is low, no pride.", "isBible": false, "source": "John Bunyan, The Pilgrim's Progress, Part II, the shepherd boy's song (1684)" },
-        { "quote": "Cast thy bread upon the waters: for thou shalt find it after many days.", "isBible": true, "source": "Ecclesiastes 11:1 (KJV)" },
-        { "quote": "The mind is its own place, and in itself can make a heav'n of hell, a hell of heav'n.", "isBible": false, "source": "John Milton, Paradise Lost, Book 1 (1667)" },
-        { "quote": "Man proposes, but God disposes.", "isBible": false, "source": "Thomas à Kempis, The Imitation of Christ, Book 1 Chapter 19 (c. 1420)" }
-      ],
-      "note": "Ecclesiastes 11:1. The decoys come from John Bunyan, John Milton and Thomas à Kempis."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "The better part of valour is discretion.", "isBible": false, "source": "William Shakespeare, Henry IV Part 1, Act 5 Scene 4 (c. 1597)" },
-        { "quote": "Fools rush in where angels fear to tread.", "isBible": false, "source": "Alexander Pope, An Essay on Criticism (1711)" },
-        { "quote": "Cowards die many times before their deaths; the valiant never taste of death but once.", "isBible": false, "source": "William Shakespeare, Julius Caesar, Act 2 Scene 2 (1599)" },
-        { "quote": "The race is not to the swift, nor the battle to the strong.", "isBible": true, "source": "Ecclesiastes 9:11 (KJV)" }
-      ],
-      "note": "Ecclesiastes 9:11 goes on: \"but time and chance happeneth to them all.\""
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "Diligence is the mother of good luck.", "isBible": false, "source": "Benjamin Franklin, Poor Richard's Almanack (1736)" },
-        { "quote": "Go to the ant, thou sluggard; consider her ways, and be wise.", "isBible": true, "source": "Proverbs 6:6 (KJV)" },
-        { "quote": "Little strokes fell great oaks.", "isBible": false, "source": "Benjamin Franklin, The Way to Wealth (1758)" },
-        { "quote": "Lost time is never found again.", "isBible": false, "source": "Benjamin Franklin, The Way to Wealth (1758)" }
-      ],
-      "note": "Proverbs 6:6. The three decoys are all from Benjamin Franklin's Poor Richard."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "Hope springs eternal in the human breast.", "isBible": false, "source": "Alexander Pope, An Essay on Man, Epistle 1 (1733)" },
-        { "quote": "They also serve who only stand and wait.", "isBible": false, "source": "John Milton, sonnet \"When I consider how my light is spent\" (published 1673)" },
-        { "quote": "The course of true love never did run smooth.", "isBible": false, "source": "William Shakespeare, A Midsummer Night's Dream, Act 1 Scene 1 (c. 1595)" },
-        { "quote": "Hope deferred maketh the heart sick.", "isBible": true, "source": "Proverbs 13:12 (KJV)" }
-      ],
-      "note": "Proverbs 13:12. Pope, Milton and Shakespeare supplied the decoys."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "With coarse rice to eat, with water to drink, and my bended arm for a pillow; I have still joy in the midst of these things.", "isBible": false, "source": "Confucius, Analects, Book 7 (James Legge translation)" },
-        { "quote": "Better is a dinner of herbs where love is, than a stalled ox and hatred therewith.", "isBible": true, "source": "Proverbs 15:17 (KJV)" },
-        { "quote": "It is not the man who has too little, but the man who craves more, that is poor.", "isBible": false, "source": "Seneca, Moral Letters to Lucilius, Letter 2 (Richard Gummere translation)" },
-        { "quote": "Very little is needed to make a happy life.", "isBible": false, "source": "Marcus Aurelius, Meditations, Book 7.67 (English translation)" }
-      ],
-      "note": "Proverbs 15:17: a simple meal with love beats a feast with hatred."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "No man is an island, entire of itself.", "isBible": false, "source": "John Donne, Devotions upon Emergent Occasions, Meditation 17 (1624)" },
-        { "quote": "Two heads are better than one.", "isBible": false, "source": "English proverb, recorded in John Heywood's book of proverbs (1546)" },
-        { "quote": "A threefold cord is not quickly broken.", "isBible": true, "source": "Ecclesiastes 4:12 (KJV)" },
-        { "quote": "United we stand, divided we fall.", "isBible": false, "source": "Idea from Aesop's fables; slogan from John Dickinson, \"The Liberty Song\" (1768)" }
-      ],
-      "note": "Ecclesiastes 4:12. Verse 9 says \"Two are better than one\", but never \"two heads\"."
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "Answer a fool according to his folly, lest he be wise in his own conceit.", "isBible": true, "source": "Proverbs 26:5 (KJV)" },
-        { "quote": "Better a witty fool than a foolish wit.", "isBible": false, "source": "William Shakespeare, Twelfth Night, Act 1 Scene 5 (c. 1601)" },
-        { "quote": "The fool doth think he is wise, but the wise man knows himself to be a fool.", "isBible": false, "source": "William Shakespeare, As You Like It, Act 5 Scene 1 (c. 1599)" },
-        { "quote": "Experience keeps a dear school, but fools will learn in no other.", "isBible": false, "source": "Benjamin Franklin, The Way to Wealth (1758)" }
-      ],
-      "note": "Proverbs 26:5. The verse right before it says \"Answer not a fool according to his folly.\""
-    },
-    {
-      "type": "choose",
-      "options": [
-        { "quote": "The unexamined life is not worth living.", "isBible": false, "source": "Socrates at his trial, as reported by Plato, Apology 38a" },
-        { "quote": "Long is the way and hard, that out of Hell leads up to light.", "isBible": false, "source": "John Milton, Paradise Lost, Book 2 (1667)" },
-        { "quote": "We are such stuff as dreams are made on; and our little life is rounded with a sleep.", "isBible": false, "source": "William Shakespeare, The Tempest, Act 4 Scene 1 (c. 1611)" },
-        { "quote": "Now we see through a glass, darkly; but then face to face.", "isBible": true, "source": "1 Corinthians 13:12 (KJV)" }
-      ],
-      "note": "Paul in 1 Corinthians 13:12, part of the famous chapter on love."
-    }
+    { "type": "choose", "options": [
+      {"quote": "Love is strong as death; jealousy is cruel as the grave.", "isBible": true, "source": "Song of Solomon 8:6 (KJV)"},
+      {"quote": "Death cannot stop true love. All it can do is delay it for a while.", "isBible": false, "source": "The Princess Bride (1987), spoken by Westley"},
+      {"quote": "Love is not love which alters when it alteration finds.", "isBible": false, "source": "William Shakespeare, Sonnet 116 (1609)"},
+      {"quote": "The greatest thing you'll ever learn is just to love and be loved in return.", "isBible": false, "source": "Nat King Cole, \"Nature Boy\" (1948)"}
+    ], "note": "Bible: Song of Solomon 8:6, older than The Princess Bride or Shakespeare. 'Love and be loved' is the song 'Nature Boy'." },
+    { "type": "choose", "options": [
+      {"quote": "Love is a battlefield.", "isBible": false, "source": "Pat Benatar, \"Love Is a Battlefield\" (1983)"},
+      {"quote": "Many waters cannot quench love, neither can the floods drown it.", "isBible": true, "source": "Song of Solomon 8:7 (KJV)"},
+      {"quote": "My bounty is as boundless as the sea, my love as deep.", "isBible": false, "source": "William Shakespeare, Romeo and Juliet, Act 2 Scene 2 (c. 1595)"},
+      {"quote": "River deep, mountain high.", "isBible": false, "source": "Ike & Tina Turner, \"River Deep - Mountain High\" (1966)"}
+    ], "note": "Bible: Song of Solomon 8:7. Four love-and-water lines; the others are Pat Benatar, Juliet and Ike & Tina Turner." },
+    { "type": "choose", "options": [
+      {"quote": "All you need is love.", "isBible": false, "source": "The Beatles, \"All You Need Is Love\" (1967)"},
+      {"quote": "How do I love thee? Let me count the ways.", "isBible": false, "source": "Elizabeth Barrett Browning, Sonnets from the Portuguese, Sonnet 43 (1850)"},
+      {"quote": "She walks in beauty, like the night of cloudless climes and starry skies.", "isBible": false, "source": "Lord Byron, \"She Walks in Beauty\" (1815)"},
+      {"quote": "My beloved is mine, and I am his.", "isBible": true, "source": "Song of Solomon 2:16 (KJV)"}
+    ], "note": "Bible: Song of Solomon 2:16. It sounds like a pop chorus; 'How do I love thee' is Elizabeth Barrett Browning." },
+    { "type": "choose", "options": [
+      {"quote": "O, beware, my lord, of jealousy; it is the green-eyed monster which doth mock the meat it feeds on.", "isBible": false, "source": "William Shakespeare, Othello, Act 3 Scene 3 (c. 1603)"},
+      {"quote": "Jealousy is the rage of a man.", "isBible": true, "source": "Proverbs 6:34 (KJV)"},
+      {"quote": "Love hurts.", "isBible": false, "source": "The Everly Brothers, \"Love Hurts\" (1960)"},
+      {"quote": "Yet each man kills the thing he loves.", "isBible": false, "source": "Oscar Wilde, The Ballad of Reading Gaol (1898)"}
+    ], "note": "Bible: Proverbs 6:34. The archaic one is Iago in Othello; 'Each man kills the thing he loves' is Oscar Wilde." },
+    { "type": "choose", "options": [
+      {"quote": "Sometimes it lasts in love, but sometimes it hurts instead.", "isBible": false, "source": "Adele, \"Someone Like You\" (2011)"},
+      {"quote": "'Tis better to have loved and lost than never to have loved at all.", "isBible": false, "source": "Alfred Tennyson, In Memoriam A.H.H. (1850)"},
+      {"quote": "There is a crack in everything, that's how the light gets in.", "isBible": false, "source": "Leonard Cohen, \"Anthem\" (1992)"},
+      {"quote": "Even in laughter the heart is sorrowful; and the end of that mirth is heaviness.", "isBible": true, "source": "Proverbs 14:13 (KJV)"}
+    ], "note": "Bible: Proverbs 14:13. Sounds like a sad-clown soul song, written centuries before Adele or Leonard Cohen." },
+    { "type": "choose", "options": [
+      {"quote": "Stolen waters are sweet, and bread eaten in secret is pleasant.", "isBible": true, "source": "Proverbs 9:17 (KJV)"},
+      {"quote": "I can resist everything except temptation.", "isBible": false, "source": "Oscar Wilde, Lady Windermere's Fan, Act 1 (1892), spoken by Lord Darlington"},
+      {"quote": "You're the devil in disguise.", "isBible": false, "source": "Elvis Presley, \"(You're the) Devil in Disguise\" (1963)"},
+      {"quote": "He did not want the apple for the apple's sake, he wanted it only because it was forbidden.", "isBible": false, "source": "Mark Twain, Pudd'nhead Wilson (1894)"}
+    ], "note": "Bible: Proverbs 9:17, spoken by 'a foolish woman' tempting passers-by. The others are Wilde, Elvis and Twain." },
+    { "type": "choose", "options": [
+      {"quote": "Bright star, would I were stedfast as thou art.", "isBible": false, "source": "John Keats, \"Bright Star\" (written 1819)"},
+      {"quote": "Hello darkness, my old friend.", "isBible": false, "source": "Simon & Garfunkel, \"The Sound of Silence\" (1964)"},
+      {"quote": "By night on my bed I sought him whom my soul loveth: I sought him, but I found him not.", "isBible": true, "source": "Song of Solomon 3:1 (KJV)"},
+      {"quote": "Ain't no sunshine when she's gone.", "isBible": false, "source": "Bill Withers, \"Ain't No Sunshine\" (1971)"}
+    ], "note": "Bible: Song of Solomon 3:1, a love song about lying awake at night. 'Thou art' is Keats, not scripture." },
+    { "type": "choose", "options": [
+      {"quote": "The night is dark, and I am far from home; lead thou me on!", "isBible": false, "source": "John Henry Newman, hymn \"Lead, Kindly Light\" (1833)"},
+      {"quote": "Rage, rage against the dying of the light.", "isBible": false, "source": "Dylan Thomas, \"Do Not Go Gentle into That Good Night\" (1951)"},
+      {"quote": "Turn around, bright eyes.", "isBible": false, "source": "Bonnie Tyler, \"Total Eclipse of the Heart\" (1983)"},
+      {"quote": "Surely the darkness shall cover me; even the night shall be light about me.", "isBible": true, "source": "Psalms 139:11 (KJV)"}
+    ], "note": "Bible: Psalm 139:11. The hymn 'Lead, Kindly Light' sounds older, but it was written in 1833." },
+    { "type": "choose", "options": [
+      {"quote": "Here comes the sun.", "isBible": false, "source": "The Beatles, \"Here Comes the Sun\" (1969)"},
+      {"quote": "The winter is past, the rain is over and gone.", "isBible": true, "source": "Song of Solomon 2:11 (KJV)"},
+      {"quote": "I can see clearly now.", "isBible": false, "source": "Johnny Nash, \"I Can See Clearly Now\" (1972)"},
+      {"quote": "If Winter comes, can Spring be far behind?", "isBible": false, "source": "Percy Bysshe Shelley, \"Ode to the West Wind\" (1820)"}
+    ], "note": "Bible: Song of Solomon 2:11. The Beatles and Johnny Nash sang about the same moment: winter and rain ending." },
+    { "type": "choose", "options": [
+      {"quote": "Rough winds do shake the darling buds of May, and summer's lease hath all too short a date.", "isBible": false, "source": "William Shakespeare, Sonnet 18 (1609)"},
+      {"quote": "In the bleak midwinter, frosty wind made moan.", "isBible": false, "source": "Christina Rossetti, \"In the Bleak Midwinter\" (1872)"},
+      {"quote": "Seasons in the sun.", "isBible": false, "source": "Terry Jacks, \"Seasons in the Sun\" (1973)"},
+      {"quote": "The harvest is past, the summer is ended, and we are not saved.", "isBible": true, "source": "Jeremiah 8:20 (KJV)"}
+    ], "note": "Bible: Jeremiah 8:20. It sounds like an indie lyric; the 'hath' line is Shakespeare's Sonnet 18." },
+    { "type": "choose", "options": [
+      {"quote": "They have sown the wind, and they shall reap the whirlwind.", "isBible": true, "source": "Hosea 8:7 (KJV)"},
+      {"quote": "Like a candle in the wind.", "isBible": false, "source": "Elton John, \"Candle in the Wind\" (1973)"},
+      {"quote": "The answer, my friend, is blowin' in the wind.", "isBible": false, "source": "Bob Dylan, \"Blowin' in the Wind\" (1963)"},
+      {"quote": "Blow, winds, and crack your cheeks! rage! blow!", "isBible": false, "source": "William Shakespeare, King Lear, Act 3 Scene 2 (c. 1606)"}
+    ], "note": "Bible: Hosea 8:7, the origin of 'sow the wind, reap the whirlwind'. The rest are Elton John, Bob Dylan and King Lear." },
+    { "type": "choose", "options": [
+      {"quote": "Riders on the storm.", "isBible": false, "source": "The Doors, \"Riders on the Storm\" (1971)"},
+      {"quote": "The heaven was black with clouds and wind, and there was a great rain.", "isBible": true, "source": "1 Kings 18:45 (KJV)"},
+      {"quote": "Into each life some rain must fall, some days must be dark and dreary.", "isBible": false, "source": "Henry Wadsworth Longfellow, \"The Rainy Day\" (1842)"},
+      {"quote": "All those moments will be lost in time, like tears in rain.", "isBible": false, "source": "Blade Runner (1982), spoken by Roy Batty"}
+    ], "note": "Bible: 1 Kings 18:45, the rain that ended Elijah's drought. 'Into each life some rain must fall' is Longfellow." },
+    { "type": "choose", "options": [
+      {"quote": "He hath loosed the fateful lightning of His terrible swift sword.", "isBible": false, "source": "Julia Ward Howe, \"Battle Hymn of the Republic\" (1862)"},
+      {"quote": "There's a man goin' 'round takin' names.", "isBible": false, "source": "Johnny Cash, \"The Man Comes Around\" (2002)"},
+      {"quote": "Fire and brimstone coming down from the skies! Rivers and seas boiling!", "isBible": false, "source": "Ghostbusters (1984), spoken by Ray Stantz"},
+      {"quote": "I looked, and behold a pale horse: and his name that sat on him was Death, and Hell followed with him.", "isBible": true, "source": "Revelation 6:8 (KJV)"}
+    ], "note": "Bible: Revelation 6:8, the fourth horseman. Johnny Cash's song is about these horsemen; the 'hath' line is the Battle Hymn." },
+    { "type": "choose", "options": [
+      {"quote": "Some say the world will end in fire, some say in ice.", "isBible": false, "source": "Robert Frost, \"Fire and Ice\" (1920)"},
+      {"quote": "This is the way the world ends, not with a bang but a whimper.", "isBible": false, "source": "T. S. Eliot, \"The Hollow Men\" (1925)"},
+      {"quote": "I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea.", "isBible": true, "source": "Revelation 21:1 (KJV)"},
+      {"quote": "It's the end of the world as we know it.", "isBible": false, "source": "R.E.M., \"It's the End of the World as We Know It (And I Feel Fine)\" (1987)"}
+    ], "note": "Bible: Revelation 21:1. Frost and Eliot wrote the other famous end-of-the-world lines; R.E.M. sang one." },
+    { "type": "choose", "options": [
+      {"quote": "God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying.", "isBible": true, "source": "Revelation 21:4 (KJV)"},
+      {"quote": "Knockin' on heaven's door.", "isBible": false, "source": "Bob Dylan, \"Knockin' on Heaven's Door\" (1973)"},
+      {"quote": "Some glad morning when this life is over, I'll fly away.", "isBible": false, "source": "Albert E. Brumley, hymn \"I'll Fly Away\" (1929)"},
+      {"quote": "Swift to its close ebbs out life's little day; earth's joys grow dim, its glories pass away.", "isBible": false, "source": "Henry Francis Lyte, hymn \"Abide with Me\" (1847)"}
+    ], "note": "Bible: Revelation 21:4. The 'earth's joys grow dim' line is the hymn 'Abide with Me' (1847)." },
+    { "type": "choose", "options": [
+      {"quote": "A hard rain's a-gonna fall.", "isBible": false, "source": "Bob Dylan, \"A Hard Rain's a-Gonna Fall\" (1963)"},
+      {"quote": "Heaven is a place, a place where nothing, nothing ever happens.", "isBible": false, "source": "Talking Heads, \"Heaven\" (1979)"},
+      {"quote": "Bad moon rising.", "isBible": false, "source": "Creedence Clearwater Revival, \"Bad Moon Rising\" (1969)"},
+      {"quote": "There was silence in heaven about the space of half an hour.", "isBible": true, "source": "Revelation 8:1 (KJV)"}
+    ], "note": "Bible: Revelation 8:1, when the seventh seal is opened. The others are Dylan, Talking Heads and Creedence." },
+    { "type": "choose", "options": [
+      {"quote": "Gather ye rosebuds while ye may, old time is still a-flying.", "isBible": false, "source": "Robert Herrick, \"To the Virgins, to Make Much of Time\" (1648)"},
+      {"quote": "A man hath no better thing under the sun, than to eat, and to drink, and to be merry.", "isBible": true, "source": "Ecclesiastes 8:15 (KJV)"},
+      {"quote": "Let the good times roll.", "isBible": false, "source": "Shirley and Lee, \"Let the Good Times Roll\" (1956)"},
+      {"quote": "Let us have wine and women, mirth and laughter, sermons and soda-water the day after.", "isBible": false, "source": "Lord Byron, Don Juan, Canto II (1819)"}
+    ], "note": "Bible: Ecclesiastes 8:15, the source of 'eat, drink and be merry'. 'Gather ye rosebuds' is Herrick's 1648 poem." },
+    { "type": "choose", "options": [
+      {"quote": "Drink to me only with thine eyes.", "isBible": false, "source": "Ben Jonson, \"Song: To Celia\" (1616)"},
+      {"quote": "A Book of Verses underneath the Bough, a Jug of Wine, a Loaf of Bread, and Thou.", "isBible": false, "source": "Edward FitzGerald, The Rubaiyat of Omar Khayyam (1859)"},
+      {"quote": "Come, eat of my bread, and drink of the wine which I have mingled.", "isBible": true, "source": "Proverbs 9:5 (KJV)"},
+      {"quote": "Wine is bottled poetry.", "isBible": false, "source": "Robert Louis Stevenson, The Silverado Squatters (1883)"}
+    ], "note": "Bible: Proverbs 9:5, Wisdom inviting people to her feast. The 'bread, wine and thou' line is the Rubaiyat." },
+    { "type": "choose", "options": [
+      {"quote": "With great power comes great responsibility.", "isBible": false, "source": "Spider-Man (2002), spoken by Ben Parker"},
+      {"quote": "Power tends to corrupt, and absolute power corrupts absolutely.", "isBible": false, "source": "Lord Acton, letter to Mandell Creighton (1887)"},
+      {"quote": "I charge thee, fling away ambition: by that sin fell the angels.", "isBible": false, "source": "William Shakespeare, Henry VIII, Act 3 Scene 2 (c. 1613)"},
+      {"quote": "Unto whomsoever much is given, of him shall be much required.", "isBible": true, "source": "Luke 12:48 (KJV)"}
+    ], "note": "Bible: Luke 12:48, the old original of Spider-Man's 'great power, great responsibility'. 'I charge thee' is Shakespeare." },
+    { "type": "choose", "options": [
+      {"quote": "What doesn't kill you makes you stronger.", "isBible": false, "source": "Kelly Clarkson, \"Stronger (What Doesn't Kill You)\" (2012)"},
+      {"quote": "Not by might, nor by power, but by my spirit.", "isBible": true, "source": "Zechariah 4:6 (KJV)"},
+      {"quote": "You either die a hero, or you live long enough to see yourself become the villain.", "isBible": false, "source": "The Dark Knight (2008), spoken by Harvey Dent"},
+      {"quote": "The price of greatness is responsibility.", "isBible": false, "source": "Winston Churchill, speech at Harvard University (1943)"}
+    ], "note": "Bible: Zechariah 4:6. Kelly Clarkson's line goes back to Nietzsche (1888), not the Bible." },
+    { "type": "choose", "options": [
+      {"quote": "My name is Ozymandias, King of Kings; look on my works, ye Mighty, and despair!", "isBible": false, "source": "Percy Bysshe Shelley, \"Ozymandias\" (1818)"},
+      {"quote": "I used to rule the world.", "isBible": false, "source": "Coldplay, \"Viva la Vida\" (2008)"},
+      {"quote": "Uneasy lies the head that wears a crown.", "isBible": false, "source": "William Shakespeare, Henry IV, Part 2, Act 3 Scene 1 (c. 1598)"},
+      {"quote": "Put not your trust in princes, nor in the son of man, in whom there is no help.", "isBible": true, "source": "Psalms 146:3 (KJV)"}
+    ], "note": "Bible: Psalm 146:3. 'King of Kings' sounds biblical, but that line is Shelley's poem 'Ozymandias'." },
+    { "type": "choose", "options": [
+      {"quote": "A feast is made for laughter, and wine maketh merry: but money answereth all things.", "isBible": true, "source": "Ecclesiastes 10:19 (KJV)"},
+      {"quote": "Money, that's what I want.", "isBible": false, "source": "Barrett Strong, \"Money (That's What I Want)\" (1959)"},
+      {"quote": "Money, so they say, is the root of all evil today.", "isBible": false, "source": "Pink Floyd, \"Money\" (1973)"},
+      {"quote": "Put money in thy purse.", "isBible": false, "source": "William Shakespeare, Othello, Act 1 Scene 3 (c. 1603), spoken by Iago"}
+    ], "note": "Bible: Ecclesiastes 10:19. Sounds like a rap line. Pink Floyd's 'root of all evil' echoes 1 Timothy 6:10." },
+    { "type": "choose", "options": [
+      {"quote": "Money can't buy me love.", "isBible": false, "source": "The Beatles, \"Can't Buy Me Love\" (1964)"},
+      {"quote": "Greed, for lack of a better word, is good.", "isBible": false, "source": "Wall Street (1987), spoken by Gordon Gekko"},
+      {"quote": "Riches certainly make themselves wings; they fly away as an eagle toward heaven.", "isBible": true, "source": "Proverbs 23:5 (KJV)"},
+      {"quote": "We are living in a material world.", "isBible": false, "source": "Madonna, \"Material Girl\" (1984)"}
+    ], "note": "Bible: Proverbs 23:5. Money growing wings and flying off sounds like a pop lyric, but it is a proverb." },
+    { "type": "choose", "options": [
+      {"quote": "In this world nothing can be said to be certain, except death and taxes.", "isBible": false, "source": "Benjamin Franklin, letter to Jean-Baptiste Le Roy (1789)"},
+      {"quote": "Money makes the world go around.", "isBible": false, "source": "Liza Minnelli and Joel Grey, \"Money, Money\", from the film Cabaret (1972)"},
+      {"quote": "Remember that time is money.", "isBible": false, "source": "Benjamin Franklin, Advice to a Young Tradesman (1748)"},
+      {"quote": "Owe no man any thing, but to love one another.", "isBible": true, "source": "Romans 13:8 (KJV)"}
+    ], "note": "Bible: Romans 13:8, Paul's advice on debt. Both Franklin lines sound like proverbs but are his own." },
+    { "type": "choose", "options": [
+      {"quote": "Better to remain silent and be thought a fool than to speak and remove all doubt.", "isBible": false, "source": "Usually credited to Abraham Lincoln or Mark Twain (doubtful); earliest known similar version by Maurice Switzer (1907)"},
+      {"quote": "Even a fool, when he holdeth his peace, is counted wise.", "isBible": true, "source": "Proverbs 17:28 (KJV)"},
+      {"quote": "Wise men say only fools rush in.", "isBible": false, "source": "Elvis Presley, \"Can't Help Falling in Love\" (1961)"},
+      {"quote": "Give every man thy ear, but few thy voice.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 1 Scene 3 (c. 1600), spoken by Polonius"}
+    ], "note": "Bible: Proverbs 17:28. The 'remain silent' quote is the same idea; its credit to Lincoln or Twain is doubtful." },
+    { "type": "choose", "options": [
+      {"quote": "Stupid is as stupid does.", "isBible": false, "source": "Forrest Gump (1994), spoken by Forrest Gump"},
+      {"quote": "The fool on the hill sees the sun going down.", "isBible": false, "source": "The Beatles, \"The Fool on the Hill\" (1967)"},
+      {"quote": "A fool and his money are soon parted.", "isBible": false, "source": "English proverb; early form in Thomas Tusser, Five Hundred Points of Good Husbandry (1573)"},
+      {"quote": "A wise man's heart is at his right hand; but a fool's heart at his left.", "isBible": true, "source": "Ecclesiastes 10:2 (KJV)"}
+    ], "note": "Bible: Ecclesiastes 10:2. Sounds like a joke or a song line, but it is from the Bible." },
+    { "type": "choose", "options": [
+      {"quote": "Some books are to be tasted, others to be swallowed, and some few to be chewed and digested.", "isBible": false, "source": "Francis Bacon, essay \"Of Studies\" (1625)"},
+      {"quote": "Of making many books there is no end; and much study is a weariness of the flesh.", "isBible": true, "source": "Ecclesiastes 12:12 (KJV)"},
+      {"quote": "Don't know much about history.", "isBible": false, "source": "Sam Cooke, \"Wonderful World\" (1960)"},
+      {"quote": "The more that you read, the more things you will know.", "isBible": false, "source": "Dr. Seuss, I Can Read with My Eyes Shut! (1978)"}
+    ], "note": "Bible: Ecclesiastes 12:12. Every student's complaint about homework is in the Bible." },
+    { "type": "choose", "options": [
+      {"quote": "Knowledge is power.", "isBible": false, "source": "Usually credited to Francis Bacon, from his Latin \"ipsa scientia potestas est\" (1597)"},
+      {"quote": "Imagination is more important than knowledge.", "isBible": false, "source": "Albert Einstein, interview with George Sylvester Viereck (1929)"},
+      {"quote": "We don't need no education.", "isBible": false, "source": "Pink Floyd, \"Another Brick in the Wall, Part 2\" (1979)"},
+      {"quote": "Wisdom is better than strength: nevertheless the poor man's wisdom is despised, and his words are not heard.", "isBible": true, "source": "Ecclesiastes 9:16 (KJV)"}
+    ], "note": "Bible: Ecclesiastes 9:16. Sounds like a protest song about the poor going unheard." },
+    { "type": "choose", "options": [
+      {"quote": "Wine is a mocker, strong drink is raging.", "isBible": true, "source": "Proverbs 20:1 (KJV)"},
+      {"quote": "Red, red wine, go to my head.", "isBible": false, "source": "Neil Diamond, \"Red Red Wine\" (1967)"},
+      {"quote": "God made beer because he loves us and wants us to be happy.", "isBible": false, "source": "Usually credited to Benjamin Franklin (doubtful; he wrote that wine is proof God loves us)"},
+      {"quote": "I have taken more out of alcohol than alcohol has taken out of me.", "isBible": false, "source": "Usually attributed to Winston Churchill; attribution not verified"}
+    ], "note": "Bible: Proverbs 20:1. The beer line is wrongly credited to Franklin, who wrote about wine." },
+    { "type": "choose", "options": [
+      {"quote": "The whiskey drowns and the beer chases my blues away.", "isBible": false, "source": "Garth Brooks, \"Friends in Low Places\" (1990)"},
+      {"quote": "We'll tak' a cup o' kindness yet.", "isBible": false, "source": "Robert Burns, \"Auld Lang Syne\" (1788)"},
+      {"quote": "Let him drink, and forget his poverty, and remember his misery no more.", "isBible": true, "source": "Proverbs 31:7 (KJV)"},
+      {"quote": "In wine there is truth.", "isBible": false, "source": "Latin proverb \"in vino veritas\"; the idea appears in Pliny the Elder, Natural History, Book 14"}
+    ], "note": "Bible: Proverbs 31:7. Sounds like a country drinking song, but it is a proverb." },
+    { "type": "choose", "options": [
+      {"quote": "Freedom's just another word for nothing left to lose.", "isBible": false, "source": "Kris Kristofferson, \"Me and Bobby McGee\" (1969)"},
+      {"quote": "You can't handle the truth!", "isBible": false, "source": "A Few Good Men (1992), spoken by Col. Nathan Jessup"},
+      {"quote": "Beauty is truth, truth beauty, that is all ye know on earth, and all ye need to know.", "isBible": false, "source": "John Keats, \"Ode on a Grecian Urn\" (1819)"},
+      {"quote": "Ye shall know the truth, and the truth shall make you free.", "isBible": true, "source": "John 8:32 (KJV)"}
+    ], "note": "Bible: John 8:32, Jesus speaking. It is carved in the CIA's lobby, so many think it is a motto." },
+    { "type": "choose", "options": [
+      {"quote": "If the Son therefore shall make you free, ye shall be free indeed.", "isBible": true, "source": "John 8:36 (KJV)"},
+      {"quote": "I wish I knew how it would feel to be free.", "isBible": false, "source": "Nina Simone, \"I Wish I Knew How It Would Feel to Be Free\" (1967)"},
+      {"quote": "The condition upon which God hath given liberty to man is eternal vigilance.", "isBible": false, "source": "John Philpot Curran, speech in Dublin (1790)"},
+      {"quote": "They may take our lives, but they'll never take our freedom!", "isBible": false, "source": "Braveheart (1995), spoken by William Wallace"}
+    ], "note": "Bible: John 8:36. Curran's 'God hath given liberty' is a 1790 speech, later shortened to 'eternal vigilance'." },
+    { "type": "choose", "options": [
+      {"quote": "Life is short, and art long.", "isBible": false, "source": "Hippocrates, Aphorisms 1.1 (English translation of \"ars longa, vita brevis\")"},
+      {"quote": "What is your life? It is even a vapour, that appeareth for a little time, and then vanisheth away.", "isBible": true, "source": "James 4:14 (KJV)"},
+      {"quote": "Who wants to live forever?", "isBible": false, "source": "Queen, \"Who Wants to Live Forever\" (1986)"},
+      {"quote": "So long as men can breathe or eyes can see, so long lives this, and this gives life to thee.", "isBible": false, "source": "William Shakespeare, Sonnet 18 (1609)"}
+    ], "note": "Bible: James 4:14. Hippocrates, Queen and Shakespeare all muse on short lives; only the vapour line is scripture." },
+    { "type": "choose", "options": [
+      {"quote": "Only the good die young.", "isBible": false, "source": "Billy Joel, \"Only the Good Die Young\" (1977)"},
+      {"quote": "Give me liberty, or give me death!", "isBible": false, "source": "Patrick Henry, speech to the Virginia Convention (1775), as reported by William Wirt (1817)"},
+      {"quote": "Do not stand at my grave and weep; I am not there. I do not sleep.", "isBible": false, "source": "Mary Elizabeth Frye, \"Do not stand at my grave and weep\" (1932); authorship long disputed"},
+      {"quote": "A living dog is better than a dead lion.", "isBible": true, "source": "Ecclesiastes 9:4 (KJV)"}
+    ], "note": "Bible: Ecclesiastes 9:4. Sounds like a gangster film line, but it is from the Bible." },
+    { "type": "choose", "options": [
+      {"quote": "Swing low, sweet chariot, coming for to carry me home.", "isBible": false, "source": "\"Swing Low, Sweet Chariot\", African American spiritual, credited to Wallace Willis (before 1862)"},
+      {"quote": "The living know that they shall die: but the dead know not any thing.", "isBible": true, "source": "Ecclesiastes 9:5 (KJV)"},
+      {"quote": "Don't fear the reaper.", "isBible": false, "source": "Blue Oyster Cult, \"(Don't Fear) The Reaper\" (1976)"},
+      {"quote": "Get busy living, or get busy dying.", "isBible": false, "source": "The Shawshank Redemption (1994), spoken by Andy Dufresne"}
+    ], "note": "Bible: Ecclesiastes 9:5. Sounds like a goth or metal lyric, but it is from the Bible." },
+    { "type": "choose", "options": [
+      {"quote": "I get knocked down, but I get up again.", "isBible": false, "source": "Chumbawamba, \"Tubthumping\" (1997)"},
+      {"quote": "I won't back down.", "isBible": false, "source": "Tom Petty, \"I Won't Back Down\" (1989)"},
+      {"quote": "A just man falleth seven times, and riseth up again.", "isBible": true, "source": "Proverbs 24:16 (KJV)"},
+      {"quote": "Once more unto the breach, dear friends, once more.", "isBible": false, "source": "William Shakespeare, Henry V, Act 3 Scene 1 (1599), spoken by King Henry"}
+    ], "note": "Bible: Proverbs 24:16. Chumbawamba's 'get up again' is the same idea, nearly 3,000 years later." },
+    { "type": "choose", "options": [
+      {"quote": "If God be for us, who can be against us?", "isBible": true, "source": "Romans 8:31 (KJV)"},
+      {"quote": "The only thing we have to fear is fear itself.", "isBible": false, "source": "Franklin D. Roosevelt, first inaugural address (1933)"},
+      {"quote": "Fear is the path to the dark side.", "isBible": false, "source": "Star Wars: Episode I - The Phantom Menace (1999), spoken by Yoda"},
+      {"quote": "We shall fight on the beaches, we shall fight on the landing grounds.", "isBible": false, "source": "Winston Churchill, speech to the House of Commons (4 June 1940)"}
+    ], "note": "Bible: Romans 8:31. It sounds like a battle cry; the beaches line is Churchill in 1940." },
+    { "type": "choose", "options": [
+      {"quote": "Lean on me.", "isBible": false, "source": "Bill Withers, \"Lean on Me\" (1972)"},
+      {"quote": "Keep your friends close, but your enemies closer.", "isBible": false, "source": "The Godfather Part II (1974), spoken by Michael Corleone"},
+      {"quote": "Those friends thou hast, and their adoption tried, grapple them to thy soul with hoops of steel.", "isBible": false, "source": "William Shakespeare, Hamlet, Act 1 Scene 3 (c. 1600), spoken by Polonius"},
+      {"quote": "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.", "isBible": true, "source": "Proverbs 27:17 (KJV)"}
+    ], "note": "Bible: Proverbs 27:17. The 'hoops of steel' line is Polonius in Hamlet, not Scripture." },
+    { "type": "choose", "options": [
+      {"quote": "You've got a friend in me.", "isBible": false, "source": "Randy Newman, \"You've Got a Friend in Me\" (1995), from Toy Story"},
+      {"quote": "Better is a neighbour that is near than a brother far off.", "isBible": true, "source": "Proverbs 27:10 (KJV)"},
+      {"quote": "Louis, I think this is the beginning of a beautiful friendship.", "isBible": false, "source": "Casablanca (1942), spoken by Rick Blaine"},
+      {"quote": "I get by with a little help from my friends.", "isBible": false, "source": "The Beatles, \"With a Little Help from My Friends\" (1967)"}
+    ], "note": "Bible: Proverbs 27:10. Sounds like a country song about good neighbours, but it is a proverb." },
+    { "type": "choose", "options": [
+      {"quote": "The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men.", "isBible": false, "source": "Pulp Fiction (1994), spoken by Jules Winnfield"},
+      {"quote": "If you build it, he will come.", "isBible": false, "source": "Field of Dreams (1989), spoken by the Voice"},
+      {"quote": "All we have to decide is what to do with the time that is given us.", "isBible": false, "source": "J. R. R. Tolkien, The Fellowship of the Ring (1954), spoken by Gandalf"},
+      {"quote": "I will execute great vengeance upon them with furious rebukes; and they shall know that I am the LORD, when I shall lay my vengeance upon them.", "isBible": true, "source": "Ezekiel 25:17 (KJV)"}
+    ], "note": "Bible: Ezekiel 25:17. Pulp Fiction's 'Ezekiel 25:17' speech is mostly invented; only the ending is close to the verse." },
+    { "type": "choose", "options": [
+      {"quote": "Every little thing is gonna be alright.", "isBible": false, "source": "Bob Marley and the Wailers, \"Three Little Birds\" (1977)"},
+      {"quote": "Don't worry, be happy.", "isBible": false, "source": "Bobby McFerrin, \"Don't Worry, Be Happy\" (1988)"},
+      {"quote": "Let not your heart be troubled, neither let it be afraid.", "isBible": true, "source": "John 14:27 (KJV)"},
+      {"quote": "All shall be well, and all shall be well, and all manner of thing shall be well.", "isBible": false, "source": "Julian of Norwich, Revelations of Divine Love (c. 1395)"}
+    ], "note": "Bible: John 14:27, Jesus to his disciples. 'All shall be well' is the medieval mystic Julian of Norwich." },
+    { "type": "choose", "options": [
+      {"quote": "Whatever will be, will be.", "isBible": false, "source": "Doris Day, \"Que Sera, Sera\" (1956)"},
+      {"quote": "Don't stop thinking about tomorrow.", "isBible": false, "source": "Fleetwood Mac, \"Don't Stop\" (1977)"},
+      {"quote": "Tomorrow, and tomorrow, and tomorrow, creeps in this petty pace from day to day.", "isBible": false, "source": "William Shakespeare, Macbeth, Act 5 Scene 5 (c. 1606)"},
+      {"quote": "Boast not thyself of to morrow; for thou knowest not what a day may bring forth.", "isBible": true, "source": "Proverbs 27:1 (KJV)"}
+    ], "note": "Bible: Proverbs 27:1. Doris Day, Fleetwood Mac and Macbeth all talk about tomorrow; only this one is scripture." }
   ]
 }

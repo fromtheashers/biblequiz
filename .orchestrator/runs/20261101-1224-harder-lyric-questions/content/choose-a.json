@@ -1,0 +1,632 @@
+[
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Love is strong as death; jealousy is cruel as the grave.",
+        "isBible": true,
+        "source": "Song of Solomon 8:6 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "Death cannot stop true love. All it can do is delay it for a while.",
+        "isBible": false,
+        "source": "The Princess Bride (1987), spoken by Westley",
+        "category": "film-tv"
+      },
+      {
+        "quote": "Love is not love which alters when it alteration finds.",
+        "isBible": false,
+        "source": "William Shakespeare, Sonnet 116 (1609)",
+        "category": "poem"
+      },
+      {
+        "quote": "The greatest thing you'll ever learn is just to love and be loved in return.",
+        "isBible": false,
+        "source": "Nat King Cole, \"Nature Boy\" (1948)",
+        "category": "song"
+      }
+    ],
+    "note": "Bible: Song of Solomon 8:6, older than The Princess Bride or Shakespeare. 'Love and be loved' is the song 'Nature Boy'."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Love is a battlefield.",
+        "isBible": false,
+        "source": "Pat Benatar, \"Love Is a Battlefield\" (1983)",
+        "category": "song"
+      },
+      {
+        "quote": "Many waters cannot quench love, neither can the floods drown it.",
+        "isBible": true,
+        "source": "Song of Solomon 8:7 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "My bounty is as boundless as the sea, my love as deep.",
+        "isBible": false,
+        "source": "William Shakespeare, Romeo and Juliet, Act 2 Scene 2 (c. 1595)",
+        "category": "literature"
+      },
+      {
+        "quote": "River deep, mountain high.",
+        "isBible": false,
+        "source": "Ike & Tina Turner, \"River Deep - Mountain High\" (1966)",
+        "category": "song"
+      }
+    ],
+    "note": "Bible: Song of Solomon 8:7. Four love-and-water lines; the others are Pat Benatar, Juliet and Ike & Tina Turner."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "All you need is love.",
+        "isBible": false,
+        "source": "The Beatles, \"All You Need Is Love\" (1967)",
+        "category": "song"
+      },
+      {
+        "quote": "How do I love thee? Let me count the ways.",
+        "isBible": false,
+        "source": "Elizabeth Barrett Browning, Sonnets from the Portuguese, Sonnet 43 (1850)",
+        "category": "poem"
+      },
+      {
+        "quote": "She walks in beauty, like the night of cloudless climes and starry skies.",
+        "isBible": false,
+        "source": "Lord Byron, \"She Walks in Beauty\" (1815)",
+        "category": "poem"
+      },
+      {
+        "quote": "My beloved is mine, and I am his.",
+        "isBible": true,
+        "source": "Song of Solomon 2:16 (KJV)",
+        "category": "bible-lyric"
+      }
+    ],
+    "note": "Bible: Song of Solomon 2:16. It sounds like a pop chorus; 'How do I love thee' is Elizabeth Barrett Browning."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "O, beware, my lord, of jealousy; it is the green-eyed monster which doth mock the meat it feeds on.",
+        "isBible": false,
+        "source": "William Shakespeare, Othello, Act 3 Scene 3 (c. 1603)",
+        "category": "literature"
+      },
+      {
+        "quote": "Jealousy is the rage of a man.",
+        "isBible": true,
+        "source": "Proverbs 6:34 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "Love hurts.",
+        "isBible": false,
+        "source": "The Everly Brothers, \"Love Hurts\" (1960)",
+        "category": "song"
+      },
+      {
+        "quote": "Yet each man kills the thing he loves.",
+        "isBible": false,
+        "source": "Oscar Wilde, The Ballad of Reading Gaol (1898)",
+        "category": "poem"
+      }
+    ],
+    "note": "Bible: Proverbs 6:34. The archaic one is Iago in Othello; 'Each man kills the thing he loves' is Oscar Wilde."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Sometimes it lasts in love, but sometimes it hurts instead.",
+        "isBible": false,
+        "source": "Adele, \"Someone Like You\" (2011)",
+        "category": "song"
+      },
+      {
+        "quote": "'Tis better to have loved and lost than never to have loved at all.",
+        "isBible": false,
+        "source": "Alfred Tennyson, In Memoriam A.H.H. (1850)",
+        "category": "poem"
+      },
+      {
+        "quote": "There is a crack in everything, that's how the light gets in.",
+        "isBible": false,
+        "source": "Leonard Cohen, \"Anthem\" (1992)",
+        "category": "song"
+      },
+      {
+        "quote": "Even in laughter the heart is sorrowful; and the end of that mirth is heaviness.",
+        "isBible": true,
+        "source": "Proverbs 14:13 (KJV)",
+        "category": "bible-lyric"
+      }
+    ],
+    "note": "Bible: Proverbs 14:13. Sounds like a sad-clown soul song, written centuries before Adele or Leonard Cohen."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Stolen waters are sweet, and bread eaten in secret is pleasant.",
+        "isBible": true,
+        "source": "Proverbs 9:17 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "I can resist everything except temptation.",
+        "isBible": false,
+        "source": "Oscar Wilde, Lady Windermere's Fan, Act 1 (1892), spoken by Lord Darlington",
+        "category": "literature"
+      },
+      {
+        "quote": "You're the devil in disguise.",
+        "isBible": false,
+        "source": "Elvis Presley, \"(You're the) Devil in Disguise\" (1963)",
+        "category": "song"
+      },
+      {
+        "quote": "He did not want the apple for the apple's sake, he wanted it only because it was forbidden.",
+        "isBible": false,
+        "source": "Mark Twain, Pudd'nhead Wilson (1894)",
+        "category": "literature"
+      }
+    ],
+    "note": "Bible: Proverbs 9:17, spoken by 'a foolish woman' tempting passers-by. The others are Wilde, Elvis and Twain."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Bright star, would I were stedfast as thou art.",
+        "isBible": false,
+        "source": "John Keats, \"Bright Star\" (written 1819)",
+        "category": "poem"
+      },
+      {
+        "quote": "Hello darkness, my old friend.",
+        "isBible": false,
+        "source": "Simon & Garfunkel, \"The Sound of Silence\" (1964)",
+        "category": "song"
+      },
+      {
+        "quote": "By night on my bed I sought him whom my soul loveth: I sought him, but I found him not.",
+        "isBible": true,
+        "source": "Song of Solomon 3:1 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "Ain't no sunshine when she's gone.",
+        "isBible": false,
+        "source": "Bill Withers, \"Ain't No Sunshine\" (1971)",
+        "category": "song"
+      }
+    ],
+    "note": "Bible: Song of Solomon 3:1, a love song about lying awake at night. 'Thou art' is Keats, not scripture."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "The night is dark, and I am far from home; lead thou me on!",
+        "isBible": false,
+        "source": "John Henry Newman, hymn \"Lead, Kindly Light\" (1833)",
+        "category": "hymn"
+      },
+      {
+        "quote": "Rage, rage against the dying of the light.",
+        "isBible": false,
+        "source": "Dylan Thomas, \"Do Not Go Gentle into That Good Night\" (1951)",
+        "category": "poem"
+      },
+      {
+        "quote": "Turn around, bright eyes.",
+        "isBible": false,
+        "source": "Bonnie Tyler, \"Total Eclipse of the Heart\" (1983)",
+        "category": "song"
+      },
+      {
+        "quote": "Surely the darkness shall cover me; even the night shall be light about me.",
+        "isBible": true,
+        "source": "Psalms 139:11 (KJV)",
+        "category": "bible-lyric"
+      }
+    ],
+    "note": "Bible: Psalm 139:11. The hymn 'Lead, Kindly Light' sounds older, but it was written in 1833."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Here comes the sun.",
+        "isBible": false,
+        "source": "The Beatles, \"Here Comes the Sun\" (1969)",
+        "category": "song"
+      },
+      {
+        "quote": "The winter is past, the rain is over and gone.",
+        "isBible": true,
+        "source": "Song of Solomon 2:11 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "I can see clearly now.",
+        "isBible": false,
+        "source": "Johnny Nash, \"I Can See Clearly Now\" (1972)",
+        "category": "song"
+      },
+      {
+        "quote": "If Winter comes, can Spring be far behind?",
+        "isBible": false,
+        "source": "Percy Bysshe Shelley, \"Ode to the West Wind\" (1820)",
+        "category": "poem"
+      }
+    ],
+    "note": "Bible: Song of Solomon 2:11. The Beatles and Johnny Nash sang about the same moment: winter and rain ending."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Rough winds do shake the darling buds of May, and summer's lease hath all too short a date.",
+        "isBible": false,
+        "source": "William Shakespeare, Sonnet 18 (1609)",
+        "category": "poem"
+      },
+      {
+        "quote": "In the bleak midwinter, frosty wind made moan.",
+        "isBible": false,
+        "source": "Christina Rossetti, \"In the Bleak Midwinter\" (1872)",
+        "category": "poem"
+      },
+      {
+        "quote": "Seasons in the sun.",
+        "isBible": false,
+        "source": "Terry Jacks, \"Seasons in the Sun\" (1973)",
+        "category": "song"
+      },
+      {
+        "quote": "The harvest is past, the summer is ended, and we are not saved.",
+        "isBible": true,
+        "source": "Jeremiah 8:20 (KJV)",
+        "category": "bible-lyric"
+      }
+    ],
+    "note": "Bible: Jeremiah 8:20. It sounds like an indie lyric; the 'hath' line is Shakespeare's Sonnet 18."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "They have sown the wind, and they shall reap the whirlwind.",
+        "isBible": true,
+        "source": "Hosea 8:7 (KJV)",
+        "category": "bible-quote"
+      },
+      {
+        "quote": "Like a candle in the wind.",
+        "isBible": false,
+        "source": "Elton John, \"Candle in the Wind\" (1973)",
+        "category": "song"
+      },
+      {
+        "quote": "The answer, my friend, is blowin' in the wind.",
+        "isBible": false,
+        "source": "Bob Dylan, \"Blowin' in the Wind\" (1963)",
+        "category": "song"
+      },
+      {
+        "quote": "Blow, winds, and crack your cheeks! rage! blow!",
+        "isBible": false,
+        "source": "William Shakespeare, King Lear, Act 3 Scene 2 (c. 1606)",
+        "category": "literature"
+      }
+    ],
+    "note": "Bible: Hosea 8:7, the origin of 'sow the wind, reap the whirlwind'. The rest are Elton John, Bob Dylan and King Lear."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Riders on the storm.",
+        "isBible": false,
+        "source": "The Doors, \"Riders on the Storm\" (1971)",
+        "category": "song"
+      },
+      {
+        "quote": "The heaven was black with clouds and wind, and there was a great rain.",
+        "isBible": true,
+        "source": "1 Kings 18:45 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "Into each life some rain must fall, some days must be dark and dreary.",
+        "isBible": false,
+        "source": "Henry Wadsworth Longfellow, \"The Rainy Day\" (1842)",
+        "category": "poem"
+      },
+      {
+        "quote": "All those moments will be lost in time, like tears in rain.",
+        "isBible": false,
+        "source": "Blade Runner (1982), spoken by Roy Batty",
+        "category": "film-tv"
+      }
+    ],
+    "note": "Bible: 1 Kings 18:45, the rain that ended Elijah's drought. 'Into each life some rain must fall' is Longfellow."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "He hath loosed the fateful lightning of His terrible swift sword.",
+        "isBible": false,
+        "source": "Julia Ward Howe, \"Battle Hymn of the Republic\" (1862)",
+        "category": "hymn"
+      },
+      {
+        "quote": "There's a man goin' 'round takin' names.",
+        "isBible": false,
+        "source": "Johnny Cash, \"The Man Comes Around\" (2002)",
+        "category": "song"
+      },
+      {
+        "quote": "Fire and brimstone coming down from the skies! Rivers and seas boiling!",
+        "isBible": false,
+        "source": "Ghostbusters (1984), spoken by Ray Stantz",
+        "category": "film-tv"
+      },
+      {
+        "quote": "I looked, and behold a pale horse: and his name that sat on him was Death, and Hell followed with him.",
+        "isBible": true,
+        "source": "Revelation 6:8 (KJV)",
+        "category": "bible-lyric"
+      }
+    ],
+    "note": "Bible: Revelation 6:8, the fourth horseman. Johnny Cash's song is about these horsemen; the 'hath' line is the Battle Hymn."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Some say the world will end in fire, some say in ice.",
+        "isBible": false,
+        "source": "Robert Frost, \"Fire and Ice\" (1920)",
+        "category": "poem"
+      },
+      {
+        "quote": "This is the way the world ends, not with a bang but a whimper.",
+        "isBible": false,
+        "source": "T. S. Eliot, \"The Hollow Men\" (1925)",
+        "category": "poem"
+      },
+      {
+        "quote": "I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea.",
+        "isBible": true,
+        "source": "Revelation 21:1 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "It's the end of the world as we know it.",
+        "isBible": false,
+        "source": "R.E.M., \"It's the End of the World as We Know It (And I Feel Fine)\" (1987)",
+        "category": "song"
+      }
+    ],
+    "note": "Bible: Revelation 21:1. Frost and Eliot wrote the other famous end-of-the-world lines; R.E.M. sang one."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying.",
+        "isBible": true,
+        "source": "Revelation 21:4 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "Knockin' on heaven's door.",
+        "isBible": false,
+        "source": "Bob Dylan, \"Knockin' on Heaven's Door\" (1973)",
+        "category": "song"
+      },
+      {
+        "quote": "Some glad morning when this life is over, I'll fly away.",
+        "isBible": false,
+        "source": "Albert E. Brumley, hymn \"I'll Fly Away\" (1929)",
+        "category": "hymn"
+      },
+      {
+        "quote": "Swift to its close ebbs out life's little day; earth's joys grow dim, its glories pass away.",
+        "isBible": false,
+        "source": "Henry Francis Lyte, hymn \"Abide with Me\" (1847)",
+        "category": "hymn"
+      }
+    ],
+    "note": "Bible: Revelation 21:4. The 'earth's joys grow dim' line is the hymn 'Abide with Me' (1847)."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "A hard rain's a-gonna fall.",
+        "isBible": false,
+        "source": "Bob Dylan, \"A Hard Rain's a-Gonna Fall\" (1963)",
+        "category": "song"
+      },
+      {
+        "quote": "Heaven is a place, a place where nothing, nothing ever happens.",
+        "isBible": false,
+        "source": "Talking Heads, \"Heaven\" (1979)",
+        "category": "song"
+      },
+      {
+        "quote": "Bad moon rising.",
+        "isBible": false,
+        "source": "Creedence Clearwater Revival, \"Bad Moon Rising\" (1969)",
+        "category": "song"
+      },
+      {
+        "quote": "There was silence in heaven about the space of half an hour.",
+        "isBible": true,
+        "source": "Revelation 8:1 (KJV)",
+        "category": "bible-lyric"
+      }
+    ],
+    "note": "Bible: Revelation 8:1, when the seventh seal is opened. The others are Dylan, Talking Heads and Creedence."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Gather ye rosebuds while ye may, old time is still a-flying.",
+        "isBible": false,
+        "source": "Robert Herrick, \"To the Virgins, to Make Much of Time\" (1648)",
+        "category": "poem"
+      },
+      {
+        "quote": "A man hath no better thing under the sun, than to eat, and to drink, and to be merry.",
+        "isBible": true,
+        "source": "Ecclesiastes 8:15 (KJV)",
+        "category": "bible-quote"
+      },
+      {
+        "quote": "Let the good times roll.",
+        "isBible": false,
+        "source": "Shirley and Lee, \"Let the Good Times Roll\" (1956)",
+        "category": "song"
+      },
+      {
+        "quote": "Let us have wine and women, mirth and laughter, sermons and soda-water the day after.",
+        "isBible": false,
+        "source": "Lord Byron, Don Juan, Canto II (1819)",
+        "category": "poem"
+      }
+    ],
+    "note": "Bible: Ecclesiastes 8:15, the source of 'eat, drink and be merry'. 'Gather ye rosebuds' is Herrick's 1648 poem."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "Drink to me only with thine eyes.",
+        "isBible": false,
+        "source": "Ben Jonson, \"Song: To Celia\" (1616)",
+        "category": "poem"
+      },
+      {
+        "quote": "A Book of Verses underneath the Bough, a Jug of Wine, a Loaf of Bread, and Thou.",
+        "isBible": false,
+        "source": "Edward FitzGerald, The Rubaiyat of Omar Khayyam (1859)",
+        "category": "poem"
+      },
+      {
+        "quote": "Come, eat of my bread, and drink of the wine which I have mingled.",
+        "isBible": true,
+        "source": "Proverbs 9:5 (KJV)",
+        "category": "bible-lyric"
+      },
+      {
+        "quote": "Wine is bottled poetry.",
+        "isBible": false,
+        "source": "Robert Louis Stevenson, The Silverado Squatters (1883)",
+        "category": "famous-quote"
+      }
+    ],
+    "note": "Bible: Proverbs 9:5, Wisdom inviting people to her feast. The 'bread, wine and thou' line is the Rubaiyat."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "With great power comes great responsibility.",
+        "isBible": false,
+        "source": "Spider-Man (2002), spoken by Ben Parker",
+        "category": "film-tv"
+      },
+      {
+        "quote": "Power tends to corrupt, and absolute power corrupts absolutely.",
+        "isBible": false,
+        "source": "Lord Acton, letter to Mandell Creighton (1887)",
+        "category": "famous-quote"
+      },
+      {
+        "quote": "I charge thee, fling away ambition: by that sin fell the angels.",
+        "isBible": false,
+        "source": "William Shakespeare, Henry VIII, Act 3 Scene 2 (c. 1613)",
+        "category": "literature"
+      },
+      {
+        "quote": "Unto whomsoever much is given, of him shall be much required.",
+        "isBible": true,
+        "source": "Luke 12:48 (KJV)",
+        "category": "bible-quote"
+      }
+    ],
+    "note": "Bible: Luke 12:48, the old original of Spider-Man's 'great power, great responsibility'. 'I charge thee' is Shakespeare."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "What doesn't kill you makes you stronger.",
+        "isBible": false,
+        "source": "Kelly Clarkson, \"Stronger (What Doesn't Kill You)\" (2012)",
+        "category": "song"
+      },
+      {
+        "quote": "Not by might, nor by power, but by my spirit.",
+        "isBible": true,
+        "source": "Zechariah 4:6 (KJV)",
+        "category": "bible-quote"
+      },
+      {
+        "quote": "You either die a hero, or you live long enough to see yourself become the villain.",
+        "isBible": false,
+        "source": "The Dark Knight (2008), spoken by Harvey Dent",
+        "category": "film-tv"
+      },
+      {
+        "quote": "The price of greatness is responsibility.",
+        "isBible": false,
+        "source": "Winston Churchill, speech at Harvard University (1943)",
+        "category": "speech"
+      }
+    ],
+    "note": "Bible: Zechariah 4:6. Kelly Clarkson's line goes back to Nietzsche (1888), not the Bible."
+  },
+  {
+    "type": "choose",
+    "options": [
+      {
+        "quote": "My name is Ozymandias, King of Kings; look on my works, ye Mighty, and despair!",
+        "isBible": false,
+        "source": "Percy Bysshe Shelley, \"Ozymandias\" (1818)",
+        "category": "poem"
+      },
+      {
+        "quote": "I used to rule the world.",
+        "isBible": false,
+        "source": "Coldplay, \"Viva la Vida\" (2008)",
+        "category": "song"
+      },
+      {
+        "quote": "Uneasy lies the head that wears a crown.",
+        "isBible": false,
+        "source": "William Shakespeare, Henry IV, Part 2, Act 3 Scene 1 (c. 1598)",
+        "category": "literature"
+      },
+      {
+        "quote": "Put not your trust in princes, nor in the son of man, in whom there is no help.",
+        "isBible": true,
+        "source": "Psalms 146:3 (KJV)",
+        "category": "bible-quote"
+      }
+    ],
+    "note": "Bible: Psalm 146:3. 'King of Kings' sounds biblical, but that line is Shelley's poem 'Ozymandias'."
+  }
+]
